@@ -41,13 +41,15 @@
     hoek:   { kwh: 3000, gas: 1300, pv: 3100, bat: 10 },
     vrij:   { kwh: 3600, gas: 1900, pv: 4300, bat: 12 }
   };
-  var state = { type: 'tussen', has: {} };
+  var state = { type: 'tussen', has: {}, nood: false };
 
   var kwhIn = document.getElementById('bc-kwh');
   var gasIn = document.getElementById('bc-gas');
   var rangeEl = document.getElementById('bc-range');
   var linesEl = document.getElementById('bc-lines');
   var emptyEl = document.getElementById('bc-empty');
+  var noodEl = document.getElementById('bc-nood');
+  var NOOD_RESERVE = 0.85;          // met noodstroom houdt de batterij een deel van de capaciteit achter de hand
   document.getElementById('bc-assump').textContent =
     '€ ' + fmt(PRIJS_STROOM) + ' per kWh, € ' + fmt(PRIJS_GAS) + ' per m³ gas, € ' + fmt(TERUGLEVERVERGOEDING) +
     ' per kWh terugleververgoeding na het einde van de salderingsregeling op 1 januari 2027 en voor slim regelen een dynamisch energiecontract';
@@ -63,7 +65,7 @@
     // 1. Zonnestroom slim inzetten: 10% van de opwek naar eigen gebruik in plaats van terugleveren
     parts.push(['Zonnestroom zelf gebruiken', 0.10 * t.pv * (PRIJS_STROOM - TERUGLEVERVERGOEDING)]);
     // 2. Batterij laden in goedkope uren en ontladen in dure uren: 200 cycli per jaar, 60% van de capaciteit
-    parts.push(['Batterij laden als stroom goedkoop is', 200 * 0.6 * t.bat * 0.9 * PRIJSVERSCHIL]);
+    parts.push(['Batterij laden als stroom goedkoop is', 200 * 0.6 * t.bat * 0.9 * PRIJSVERSCHIL * (state.nood ? NOOD_RESERVE : 1)]);
     // 3. Warmtepomp draait vaker op zonnestroom en in goedkope uren
     if (wpKwh > 0) parts.push(['Warmtepomp op goedkope uren', wpKwh * 0.3 * PRIJSVERSCHIL]);
     // 4. Auto laden in de goedkoopste uren en op zonnestroom
@@ -82,7 +84,8 @@
     var lines = [];
     if (!has.pv) lines.push([state.type === 'flat' ? 'Zonnepanelen (bij een geschikt dak)' : 'Zonnepanelen',
       0.25 * t.pv * PRIJS_STROOM + 0.75 * t.pv * TERUGLEVERVERGOEDING]);
-    if (!has.bat) lines.push(['Thuisbatterij', 0.2 * t.pv * (PRIJS_STROOM - TERUGLEVERVERGOEDING)]);
+    // Noodstroom gewenst: altijd een batterij in het advies
+    if (!has.bat) lines.push([state.nood ? 'Thuisbatterij met noodstroom' : 'Thuisbatterij', 0.2 * t.pv * (PRIJS_STROOM - TERUGLEVERVERGOEDING) * (state.nood ? NOOD_RESERVE : 1)]);
     if (!has.wp && gas > 0) { var saved = 0.5 * gas; lines.push(['Hybride warmtepomp', saved * PRIJS_GAS - saved * 2.5 * PRIJS_STROOM]); }
     if (!has.ems) {
       var parts = ems(t, kwh, gas, has);
@@ -115,6 +118,10 @@
       }
       linesEl.appendChild(li);
     });
+    noodEl.hidden = !state.nood;
+    noodEl.textContent = !state.nood ? '' : has.bat
+      ? 'Noodstroom: met je bestaande batterij kan dat vaak ook. Daarvoor zijn een omvormer met noodstroomfunctie en een omschakelaar in de meterkast nodig; dat bekijken we in het adviesgesprek.'
+      : 'Noodstroom: een thuisbatterij met noodstroomfunctie houdt bij een storing de belangrijkste groepen een dag of langer aan. Hij houdt daarvoor een deel van zijn capaciteit achter de hand, dus de besparing is iets lager. Noodstroom zelf levert geen geld op, maar maakt je minder afhankelijk van het net.';
     emptyEl.hidden = lines.length > 0;
     linesEl.hidden = lines.length === 0;
     rangeEl.textContent = total > 0 ? eur(round(total * 0.7, 50)) + ' – ' + eur(round(total, 50)) : 'Al goed op weg';
@@ -132,6 +139,13 @@
       var id = btn.getAttribute('data-feat');
       state.has[id] = !state.has[id];
       btn.setAttribute('aria-pressed', String(!!state.has[id]));
+      calc();
+    });
+  });
+  root.querySelectorAll('[data-nood]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      state.nood = btn.getAttribute('data-nood') === 'ja';
+      root.querySelectorAll('[data-nood]').forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
       calc();
     });
   });
