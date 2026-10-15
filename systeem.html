@@ -33,6 +33,17 @@
 .og-key>span{width: 10px; height: 10px}
 .og-g24{display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: 2px}
 .og-c{display: flex} .og-c>span{display: block; width: 100%}
+.og-grafiek{position: relative}
+.og-g24:focus-visible{outline: 3px solid #1A6E9E; outline-offset: 4px}
+.og-c.bij{background: #EEF2F6}
+.og-c{cursor: default}
+.og-tip{position: absolute; bottom: calc(100% + 8px); translate: -50% 0; z-index: 6; display: none; flex-direction: column; gap: 3px; width: max-content; min-width: 190px; max-width: min(280px, calc(100vw - 48px)); background: #151A21; color: #FFFFFF; padding: 12px 14px; box-shadow: 0 14px 30px rgba(28,37,55,.24); pointer-events: none; font-size: 13px; line-height: 1.45; text-align: left}
+.og-tip.on{display: flex}
+.og-tip-kop{font-weight: 800; font-size: 14px}
+.og-tip-rij{display: flex; justify-content: space-between; gap: 14px}
+.og-tip-rij>span:last-child{font-weight: 700; font-variant-numeric: tabular-nums}
+.og-tip-sub{padding-left: 10px; color: #A7B4C2}
+.og-tip-sub>span:last-child{font-weight: 600}
 .og-tiles{display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px}
 .og-tile{background: #FFFFFF; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px}
 .og-tv{font-size: 30px; font-weight: 800; line-height: 1.1}
@@ -155,9 +166,9 @@
 <span style="display: flex; flex-wrap: wrap; gap: 4px 14px"><span class="og-key"><span style="background: #16BE7D"></span>Zon</span><span class="og-key"><span style="background: #1A6E9E"></span>Batterij</span><span class="og-key"><span style="background: #A7B4C2"></span>Net</span><span class="og-key"><span style="background: #BFEBD9"></span>Verwachting</span></span>
 </div>
 <span class="og-small">Opgewekt</span>
-<div class="og-g24"><div class="og-c" style="height: 90px; align-items: flex-end"><span title="00:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="01:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="02:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="03:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="04:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="05:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="06:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="07:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="08:00 · zon 0,1 kWh" style="height: 3px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="09:00 · zon 0,4 kWh" style="height: 12px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="10:00 · zon 0,9 kWh" style="height: 27px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="11:00 · zon 1,6 kWh" style="height: 48px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="12:00 · zon 2,3 kWh" style="height: 69px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="13:00 · zon 2,8 kWh" style="height: 84px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="14:00 · zon 2,4 kWh" style="height: 72px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="15:00 · zon 1,8 kWh" style="height: 54px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="16:00 · zon 1,0 kWh" style="height: 30px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="17:00 · zon 0,4 kWh" style="height: 12px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="18:00 · zon 0,1 kWh" style="height: 3px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="19:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="20:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="21:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="22:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="23:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div></div></div>
+<div class="og-grafiek"><div class="og-tip" role="status"></div><div class="og-g24" tabindex="0" role="group" aria-label="Opwek per uur: beweeg over een balk of gebruik de pijltjestoetsen voor de cijfers per uur"><div class="og-c" style="height: 90px; align-items: flex-end"><span title="00:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="01:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="02:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="03:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="04:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="05:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="06:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="07:00 · zon 0,0 kWh" style="height: 0px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="08:00 · zon 0,1 kWh" style="height: 3px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="09:00 · zon 0,4 kWh" style="height: 12px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="10:00 · zon 0,9 kWh" style="height: 27px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="11:00 · zon 1,6 kWh" style="height: 48px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="12:00 · zon 2,3 kWh" style="height: 69px; background: #16BE7D"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="13:00 · zon 2,8 kWh" style="height: 84px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="14:00 · zon 2,4 kWh" style="height: 72px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="15:00 · zon 1,8 kWh" style="height: 54px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="16:00 · zon 1,0 kWh" style="height: 30px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="17:00 · zon 0,4 kWh" style="height: 12px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="18:00 · zon 0,1 kWh" style="height: 3px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="19:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="20:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="21:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="22:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div><div class="og-c" style="height: 90px; align-items: flex-end"><span title="23:00 · zon 0,0 kWh" style="height: 0px; background: #BFEBD9"></span></div></div></div>
 <div style="height: 2px; background: #151A21"></div>
-<div class="og-g24"><div class="og-c" title="00:00 · van zon 0,0, batterij 0,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 10px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="01:00 · van zon 0,0, batterij 0,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 9px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="02:00 · van zon 0,0, batterij 0,1, net 0,2 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 4px; background: #1A6E9E"></span><span style="height: 5px; background: #A7B4C2"></span></div><div class="og-c" title="03:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="04:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="05:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 10px; background: #A7B4C2"></span></div><div class="og-c" title="06:00 · van zon 0,0, batterij 0,0, net 0,5 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 14px; background: #A7B4C2"></span></div><div class="og-c" title="07:00 · van zon 0,0, batterij 0,0, net 0,6 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 18px; background: #A7B4C2"></span></div><div class="og-c" title="08:00 · van zon 0,1, batterij 0,0, net 0,8 kWh" style="height: 45px; flex-direction: column"><span style="height: 3px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 24px; background: #A7B4C2"></span></div><div class="og-c" title="09:00 · van zon 0,4, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 12px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="10:00 · van zon 0,5, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 15px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="11:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="12:00 · van zon 0,8, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 24px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="13:00 · van zon 0,9, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 27px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="14:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="15:00 · van zon 0,5, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 15px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="16:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="17:00 · van zon 0,4, batterij 0,7, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 12px; background: #BFEBD9"></span><span style="height: 21px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="18:00 · van zon 0,1, batterij 1,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 3px; background: #BFEBD9"></span><span style="height: 39px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="19:00 · van zon 0,0, batterij 1,2, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 36px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="20:00 · van zon 0,0, batterij 0,9, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 27px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="21:00 · van zon 0,0, batterij 0,7, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 21px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="22:00 · van zon 0,0, batterij 0,5, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 15px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="23:00 · van zon 0,0, batterij 0,4, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 12px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div></div></div>
+<div class="og-grafiek"><div class="og-tip" role="status"></div><div class="og-g24" tabindex="0" role="group" aria-label="Verbruik per uur en waar het vandaan komt: beweeg over een balk of gebruik de pijltjestoetsen voor de cijfers per uur"><div class="og-c" title="00:00 · van zon 0,0, batterij 0,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 10px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="01:00 · van zon 0,0, batterij 0,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 9px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="02:00 · van zon 0,0, batterij 0,1, net 0,2 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 4px; background: #1A6E9E"></span><span style="height: 5px; background: #A7B4C2"></span></div><div class="og-c" title="03:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="04:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="05:00 · van zon 0,0, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 10px; background: #A7B4C2"></span></div><div class="og-c" title="06:00 · van zon 0,0, batterij 0,0, net 0,5 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 14px; background: #A7B4C2"></span></div><div class="og-c" title="07:00 · van zon 0,0, batterij 0,0, net 0,6 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 18px; background: #A7B4C2"></span></div><div class="og-c" title="08:00 · van zon 0,1, batterij 0,0, net 0,8 kWh" style="height: 45px; flex-direction: column"><span style="height: 3px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 24px; background: #A7B4C2"></span></div><div class="og-c" title="09:00 · van zon 0,4, batterij 0,0, net 0,3 kWh" style="height: 45px; flex-direction: column"><span style="height: 12px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 9px; background: #A7B4C2"></span></div><div class="og-c" title="10:00 · van zon 0,5, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 15px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="11:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="12:00 · van zon 0,8, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 24px; background: #16BE7D"></span><span style="height: 0px; background: #1A6E9E"></span><span style="height: 0px; background: #A7B4C2"></span></div><div class="og-c" title="13:00 · van zon 0,9, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 27px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="14:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="15:00 · van zon 0,5, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 15px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="16:00 · van zon 0,6, batterij 0,0, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 18px; background: #BFEBD9"></span><span style="height: 0px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="17:00 · van zon 0,4, batterij 0,7, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 12px; background: #BFEBD9"></span><span style="height: 21px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="18:00 · van zon 0,1, batterij 1,3, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 3px; background: #BFEBD9"></span><span style="height: 39px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="19:00 · van zon 0,0, batterij 1,2, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 36px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="20:00 · van zon 0,0, batterij 0,9, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 27px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="21:00 · van zon 0,0, batterij 0,7, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 21px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="22:00 · van zon 0,0, batterij 0,5, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 15px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div><div class="og-c" title="23:00 · van zon 0,0, batterij 0,4, net 0,0 kWh" style="height: 45px; flex-direction: column"><span style="height: 0px; background: #BFEBD9"></span><span style="height: 12px; background: #C6DCEB"></span><span style="height: 0px; background: #E1E7EE"></span></div></div></div>
 <span class="og-small">Verbruikt, en waar het vandaan komt</span>
 <div class="og-g24"><span style="grid-column: 1 / span 3; font-size: 12px; font-weight: 600; color: #4A5668">00:00</span><span style="grid-column: 7 / span 3; font-size: 12px; font-weight: 600; color: #4A5668">06:00</span><span style="grid-column: 13 / span 3; font-size: 12px; font-weight: 600; color: #4A5668">12:00</span><span style="grid-column: 19 / span 3; font-size: 12px; font-weight: 600; color: #4A5668">18:00</span></div>
 </div></div>
@@ -320,6 +331,144 @@
   renderValues(); pin('ems');
   setInterval(tick, reduce ? 10000 : 3000);
   setInterval(renderLeeftijd, 1000);
+})();
+
+(function () {
+  var grafieken = Array.prototype.slice.call(document.querySelectorAll('.og-grafiek'));
+  if (!grafieken.length) return;
+
+  function getal(t) {
+    var s = String(t).replace(/[^0-9.,]/g, '').replace(/\./g, '').replace(',', '.');
+    return parseFloat(s) || 0;
+  }
+  function nl(x) { return x.toFixed(1).replace('.', ','); }
+
+  // De dagcijfers uit de kaart "Van waar naar waar" begrenzen het laden van de batterij en het
+  // terugleveren. Ze worden uit de pagina zelf gelezen, zodat ze niet uit de pas kunnen lopen.
+  var dag = {};
+  Array.prototype.forEach.call(document.querySelectorAll('span[style*="font-weight: 600"]'), function (s) {
+    var m = /^\s*(Zon|Batterij|Net)\s*\u2192\s*(huis|batterij|net)\s*$/i.exec(s.textContent || '');
+    if (!m) return;
+    var houder = s.parentElement;
+    var buur = houder ? houder.querySelector('span[style*="font-weight: 800"]') : null;
+    if (!buur) return;
+    dag[m[1].toLowerCase() + '_' + m[2].toLowerCase()] = getal(buur.textContent);
+  });
+
+  // De uursgegevens komen uit de grafieken zelf: de titels bevatten de waarden, de kleur van de balk
+  // zegt of het om een gemeten of een verwachte waarde gaat.
+  var UUR = [];
+  for (var i = 0; i < 24; i++) {
+    UUR.push({ uur: ('0' + i).slice(-2) + ':00', zon: 0, vanZon: 0, vanBatterij: 0, vanNet: 0, gerealiseerd: true });
+  }
+
+  function lees(wrapper, soort) {
+    Array.prototype.forEach.call(wrapper.querySelectorAll('.og-g24 > .og-c'), function (c, n) {
+      if (n > 23) return;
+      var drager = c.hasAttribute('title') ? c : c.querySelector('[title]');
+      var titel = drager ? drager.getAttribute('title') : '';
+      var donker = false;
+      Array.prototype.forEach.call(c.querySelectorAll(':scope > span'), function (s) {
+        var css = (s.getAttribute('style') || '').toUpperCase();
+        if (css.indexOf('#16BE7D') >= 0 || css.indexOf('#1A6E9E') >= 0 || css.indexOf('#A7B4C2') >= 0) donker = true;
+      });
+      if (!donker) UUR[n].gerealiseerd = false;
+      if (soort === 'opwek') {
+        var m1 = /zon\s+([0-9.,]+)\s*kWh/i.exec(titel);
+        if (m1) UUR[n].zon = getal(m1[1]);
+      } else {
+        var m2 = /zon\s+([0-9.,]+),\s*batterij\s+([0-9.,]+),\s*net\s+([0-9.,]+)/i.exec(titel);
+        if (m2) { UUR[n].vanZon = getal(m2[1]); UUR[n].vanBatterij = getal(m2[2]); UUR[n].vanNet = getal(m2[3]); }
+      }
+      // De titel wordt hier overgenomen; zonder JavaScript blijft de gewone tooltip dus werken.
+      if (titel) { c.setAttribute('aria-label', titel); drager.removeAttribute('title'); }
+    });
+  }
+  lees(grafieken[0], 'opwek');
+  if (grafieken[1]) lees(grafieken[1], 'verbruik');
+
+  // Het overschot aan zonnestroom laadt eerst de batterij; wat daarna overblijft gaat naar het net.
+  var capaciteit = Math.max(0, dag.zon_batterij || 0);
+  var geladen = 0;
+  UUR.forEach(function (u) {
+    u.verbruik = u.vanZon + u.vanBatterij + u.vanNet;
+    u.overschot = Math.max(0, u.zon - u.vanZon);
+    u.naarBatterij = Math.min(u.overschot, Math.max(0, capaciteit - geladen));
+    u.teruggeleverd = Math.max(0, u.overschot - u.naarBatterij);
+    geladen += u.naarBatterij;
+  });
+
+  function rij(label, waarde, sub) {
+    return '<span class="og-tip-rij' + (sub ? ' og-tip-sub' : '') + '"><span>' + label + '</span><span>' + waarde + '</span></span>';
+  }
+  function tipHtml(u) {
+    return '<span class="og-tip-kop">' + u.uur + ' \u00b7 ' + (u.gerealiseerd ? 'gemeten' : 'verwacht') + '</span>' +
+      rij('Zon opgewekt', nl(u.zon) + ' kWh') +
+      rij('Verbruik huis', nl(u.verbruik) + ' kWh') +
+      rij('van zon', nl(u.vanZon) + ' kWh', true) +
+      rij('van batterij', nl(u.vanBatterij) + ' kWh', true) +
+      rij('van net', nl(u.vanNet) + ' kWh', true) +
+      rij('Naar de batterij', nl(u.naarBatterij) + ' kWh') +
+      rij('Teruggeleverd', nl(u.teruggeleverd) + ' kWh');
+  }
+
+  // Aanwijzer weg van de grafiek verbergt de tip; een aanraking laat hem staan tot je ergens
+  // anders tikt (op een aanraakscherm vuurt de browser anders meteen een mouseleave op 0,0).
+  document.addEventListener('pointerdown', function (e) {
+    if (e.target && e.target.closest && e.target.closest('.og-grafiek')) return;
+    Array.prototype.forEach.call(document.querySelectorAll('.og-tip.on'), function (t) { t.classList.remove('on'); });
+    Array.prototype.forEach.call(document.querySelectorAll('.og-c.bij'), function (c) { c.classList.remove('bij'); });
+  });
+
+  grafieken.forEach(function (w) {
+    var grid = w.querySelector('.og-g24');
+    var tip = w.querySelector('.og-tip');
+    if (!grid || !tip) return;
+    var kolommen = Array.prototype.slice.call(grid.children);
+    var actief = null;
+
+    function markeer(n) {
+      kolommen.forEach(function (c, i) { c.classList.toggle('bij', i === n); });
+    }
+    function toon(n) {
+      var u = UUR[n];
+      if (!u) return;
+      actief = n;
+      tip.innerHTML = tipHtml(u);
+      tip.classList.add('on');
+      var k = kolommen[n].getBoundingClientRect();
+      var wr = w.getBoundingClientRect();
+      var breedte = tip.offsetWidth;
+      var marge = 8;
+      var x = k.left - wr.left + k.width / 2;
+      var min = breedte / 2 + marge;
+      var max = wr.width - breedte / 2 - marge;
+      tip.style.left = Math.round(max < min ? wr.width / 2 : Math.max(min, Math.min(max, x))) + 'px';
+      markeer(n);
+    }
+    function verberg() {
+      actief = null;
+      tip.classList.remove('on');
+      markeer(-1);
+    }
+
+    kolommen.forEach(function (c, n) {
+      c.addEventListener('mouseenter', function () { toon(n); });
+      c.addEventListener('click', function () { toon(n); });
+    });
+    grid.addEventListener('pointerleave', function (e) {
+      if (e.pointerType === 'mouse') verberg();
+    });
+    grid.addEventListener('blur', verberg);
+    grid.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') { verberg(); return; }
+      var stap = e.key === 'ArrowRight' ? 1 : (e.key === 'ArrowLeft' ? -1 : 0);
+      if (!stap) return;
+      e.preventDefault();
+      var n = actief === null ? (stap > 0 ? 0 : 23) : Math.max(0, Math.min(23, actief + stap));
+      toon(n);
+    });
+  });
 })();
 </script>
 </body>
