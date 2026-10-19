@@ -1,4 +1,4 @@
-/* Off-grid Energiesystemen – scroll-animaties
+/* Offgrid Energiesystemen – scroll-animaties
    Laat elementen met de class "og-reveal" verschijnen zodra ze in beeld komen.
    Werkt in alle moderne browsers (Chrome, Edge, Safari, Firefox). */
 (function () {
@@ -22,7 +22,7 @@
   items.forEach(function (el) { observer.observe(el); });
 })();
 
-/* Off-grid Energiesystemen – bespaarcheck
+/* Offgrid Energiesystemen – bespaarcheck
    Pas hier de uitgangspunten aan als de energieprijzen veranderen. */
 (function () {
   var PRIJS_STROOM = 0.27;          // € per kWh, gemiddeld
@@ -154,7 +154,7 @@
   calc();
 })();
 
-/* Off-grid Energiesystemen – ankerlinks niet onder de vaste header laten vallen
+/* Offgrid Energiesystemen – ankerlinks niet onder de vaste header laten vallen
    De kop van elke sectie komt 24px onder de header te staan. */
 (function () {
   var header = document.querySelector('header');
@@ -184,7 +184,7 @@
   });
 })();
 
-/* Off-grid Energiesystemen – teamfoto
+/* Offgrid Energiesystemen – teamfoto
    Standaard staat "Ons verhaal" open. Klik op een stip (of tab) om een teamlid te tonen.
    De teksten van het team staan in index.html, in het blok met id="team-data". */
 (function () {
@@ -243,7 +243,7 @@
   show('verhaal');
 })();
 
-/* Off-grid Energiesystemen – mobiel menu */
+/* Offgrid Energiesystemen – mobiel menu */
 (function () {
   var btn = document.querySelector('.og-burger');
   var menu = document.getElementById('og-mobile-menu');
@@ -261,7 +261,7 @@
   window.addEventListener('resize', function () { if (window.innerWidth > 900) set(false); });
 })();
 
-/* Off-grid Energiesystemen – contactformulier
+/* Offgrid Energiesystemen – contactformulier
    Aanvragen gaan via FormSubmit naar het adres hieronder. */
 (function () {
   var ONTVANGER = 'info@offgridenergiesystemen.nl';

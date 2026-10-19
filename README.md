@@ -1,6 +1,6 @@
-# Off-grid Energiesystemen – website
+# Offgrid Energiesystemen – website
 
-One-page website voor Off-grid Energiesystemen.
+One-page website voor Offgrid Energiesystemen.
 
 ## Structuur
 
