@@ -1,0 +1,4 @@
+Contact: mailto:info@offgridenergiesystemen.nl
+Expires: 2027-12-31T23:59:00.000Z
+Preferred-Languages: nl, en
+Canonical: https://www.offgridenergiesystemen.nl/.well-known/security.txt
