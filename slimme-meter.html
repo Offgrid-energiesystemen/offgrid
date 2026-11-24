@@ -128,8 +128,8 @@
 <span style="font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #2A8A63; background: #EAF7F0; padding: 4px 10px; border-radius: 999px">Rekenvoorbeeld</span>
 </div>
 <p style="margin: 0 0 12px; font-size: 12.5px; line-height: 1.5; color: #7A8794">Een huis met zonnepanelen dat op een dag 10 kWh verbruikt, zonder en met een thuisbatterij. Jouw percentages hangen af van je verbruik, je opwek en de grootte van de batterij.</p>
-<svg viewBox="0 0 460 460" role="img" aria-label="Vergelijking van je stroomverbruik per drie uur: zonder maatregelen 43 procent zelfvoorzienend, met een batterij 85 procent" style="width: 100%; height: auto; display: block">
-  <rect x="0" y="0" width="460" height="460" rx="14" fill="#F4F7FA"></rect>
+<svg viewBox="0 0 460 520" role="img" aria-label="Vergelijking van je stroomverbruik per drie uur: zonder maatregelen 43 procent zelfvoorzienend, met een batterij 85 procent. Zonder batterij gaat het overschot onder de nullijn teruggeleverd aan het net; met een batterij gaat datzelfde overschot onder de nullijn de batterij in en voedt het later het huis." style="width: 100%; height: auto; display: block">
+  <rect x="0" y="0" width="460" height="520" rx="14" fill="#F4F7FA"></rect>
 
   <!-- kop -->
   <text x="28" y="26" font-family="Barlow, sans-serif" font-size="13" font-weight="700" fill="#7A8794" letter-spacing="0.5">VANDAAG</text>
@@ -187,25 +187,31 @@
   <rect x="294" y="323" width="28" height="42" fill="#4E8A1E"></rect>
   <rect x="335" y="325" width="28" height="52" fill="#4E8A1E"></rect>
 
+  <!-- naar de batterij: het overschot dat zonder batterij teruggeleverd werd, gaat nu onder de lijn de batterij in -->
+  <rect x="170" y="380" width="28" height="25" fill="#4E8A1E"></rect>
+  <rect x="212" y="380" width="28" height="57" fill="#4E8A1E"></rect>
+  <rect x="253" y="380" width="28" height="22" fill="#4E8A1E"></rect>
+
   <!-- x-as -->
-  <text x="61" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">0u</text>
-  <text x="102" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">3u</text>
-  <text x="143" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">6u</text>
-  <text x="184" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">9u</text>
-  <text x="226" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">12u</text>
-  <text x="267" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">15u</text>
-  <text x="308" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">18u</text>
-  <text x="349" y="402" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">21u</text>
+  <text x="61" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">0u</text>
+  <text x="102" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">3u</text>
+  <text x="143" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">6u</text>
+  <text x="184" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">9u</text>
+  <text x="226" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">12u</text>
+  <text x="267" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">15u</text>
+  <text x="308" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">18u</text>
+  <text x="349" y="450" font-family="Barlow, sans-serif" font-size="12" fill="#8B98A5" text-anchor="middle">21u</text>
 
   <!-- legenda -->
-  <rect x="28" y="424" width="12" height="12" fill="#C3D0DC"></rect>
-  <text x="44" y="434" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">uit het net</text>
-  <rect x="118" y="424" width="12" height="12" fill="#16BE7D"></rect>
-  <text x="134" y="434" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">je panelen</text>
-  <rect x="208" y="424" width="12" height="12" fill="#4E8A1E"></rect>
-  <text x="224" y="434" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">batterij</text>
-  <rect x="284" y="424" width="12" height="12" fill="#1F7F86"></rect>
-  <text x="300" y="434" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">teruggeleverd</text>
+  <rect x="28" y="474" width="12" height="12" fill="#C3D0DC"></rect>
+  <text x="44" y="484" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">uit het net</text>
+  <rect x="118" y="474" width="12" height="12" fill="#16BE7D"></rect>
+  <text x="134" y="484" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">je panelen</text>
+  <rect x="208" y="474" width="12" height="12" fill="#4E8A1E"></rect>
+  <text x="224" y="484" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">batterij</text>
+  <rect x="284" y="474" width="12" height="12" fill="#1F7F86"></rect>
+  <text x="300" y="484" font-family="Barlow, sans-serif" font-size="12" fill="#3D4A5C">teruggeleverd</text>
+  <text x="28" y="502" font-family="Barlow, sans-serif" font-size="11.5" fill="#8B98A5">onder de lijn: wat je huis verlaat — naar de batterij of teruggeleverd aan het net</text>
 </svg>
 <div style="margin-top: 18px; display: flex; align-items: center; gap: 12px; padding-top: 18px; border-top: 1px solid #E3EAF1">
 <span style="width: 34px; height: 34px; border-radius: 50%; background: #EAF7F0; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto">
