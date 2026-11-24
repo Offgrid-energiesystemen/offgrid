@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://offgrid-vm.tailba5fd4.ts.net; base-uri 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Slimme meter met maatregelenrapport | Offgrid</title>
-<meta name="description" content="Zie wat je huis echt verbruikt. Een slimme P1-meter, dertig dagen meten, en een rapport met maatregelen die voor jouw huis werken. € 45, inclusief verzending en rapport.">
+<title>P1-meter met maatregelenrapport | Offgrid</title>
+<meta name="description" content="Zie wat je huis echt verbruikt. De HomeWizard Wi-Fi P1-meter leest je slimme meter uit, je meet dertig dagen en je krijgt een rapport met maatregelen die voor jouw huis werken. € 45,00, inclusief verzending en rapport.">
 <link rel="canonical" href="https://www.offgridenergiesystemen.nl/slimme-meter.html">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="product">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Offgrid energiesystemen">
-<meta property="og:title" content="Slimme meter met maatregelenrapport | Offgrid">
-<meta property="og:description" content="Zie wat je huis echt verbruikt. Dertig dagen meten, dan een rapport met maatregelen die voor jouw huis werken. € 45, inclusief verzending en rapport.">
+<meta property="og:title" content="P1-meter met maatregelenrapport | Offgrid">
+<meta property="og:description" content="Zie wat je huis echt verbruikt. Dertig dagen meten met de HomeWizard Wi-Fi P1-meter, dan een rapport met maatregelen die voor jouw huis werken. € 45,00, inclusief verzending en rapport.">
 <meta property="og:url" content="https://www.offgridenergiesystemen.nl/slimme-meter.html">
 <meta property="og:image" content="https://www.offgridenergiesystemen.nl/assets/images/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,12 +24,49 @@
 <link rel="preload" href="assets/fonts/barlow-extrabold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css?v=202610091215">
 <script src="assets/js/main.js?v=202610091215" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Product",
+   "@id": "https://www.offgridenergiesystemen.nl/slimme-meter.html#product",
+   "name": "HomeWizard Wi-Fi P1-meter met maatregelenrapport",
+   "description": "De HomeWizard Wi-Fi P1-meter leest je slimme meter uit. Je meet minstens dertig dagen en krijgt daarna een maatregelenrapport met wat er in jouw huis kan en wat het oplevert.",
+   "image": "https://www.offgridenergiesystemen.nl/assets/images/homewizard-p1-meter.png",
+   "brand": {
+    "@type": "Brand",
+    "name": "HomeWizard"
+   },
+   "offers": {
+    "@type": "Offer",
+    "url": "https://www.offgridenergiesystemen.nl/slimme-meter.html#bestellen",
+    "price": "45.00",
+    "priceCurrency": "EUR",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "seller": {
+     "@type": "Organization",
+     "name": "Offgrid energiesystemen",
+     "url": "https://www.offgridenergiesystemen.nl/"
+    }
+   }
+  }
+ ]
+}
+</script>
 <style>
   /* Alleen voor deze proefpagina: de velden in het bestelformulier passen op een telefoon niet
      twee aan twee naast elkaar. */
   @media (max-width: 560px) {
     .bestelvelden { grid-template-columns: 1fr !important; }
     .grafiekkaart { padding: 14px !important; }
+  }
+  /* Op een smal scherm valt het bestelblok onder elkaar. De samenvatting met de prijs gaat dan
+     vóór het formulier, zodat de klant de prijs ziet voordat hij op Afrekenen drukt. */
+  @media (max-width: 780px) {
+    .bestelgrid { grid-template-columns: 1fr !important; }
+    .bestelgrid > aside { order: -1; }
   }
 </style>
 </head>
@@ -71,8 +108,8 @@
 
 <p style="margin: 18px 0 0; font-size: 20px; color: #3D4A5C; max-width: 560px">De HomeWizard Wi-Fi P1-meter leest je slimme meter uit. Je ziet live wat je afneemt en wat je teruglevert — in plaats van raden naar een jaarafrekening.</p>
 
-<div style="margin: 26px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px">
-<span style="font-size: 46px; font-weight: 800; line-height: 1">€ 45</span>
+<div style="margin: 22px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px">
+<span style="font-size: 46px; font-weight: 800; line-height: 1">€ 45,00</span>
 <span style="font-size: 16px; color: #3D4A5C">inclusief verzending en het rapport</span>
 </div>
 
@@ -87,6 +124,10 @@
 <!-- productbeeld -->
 <div style="flex: 1 1 360px; min-width: 0">
 <div class="grafiekkaart" style="background: #FFFFFF; border-radius: 18px; padding: 26px; box-shadow: 0 12px 30px rgba(21,26,33,.07)">
+<div style="margin: 0 0 10px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #2A8A63; background: #EAF7F0; padding: 4px 10px; border-radius: 999px">Rekenvoorbeeld</span>
+</div>
+<p style="margin: 0 0 12px; font-size: 12.5px; line-height: 1.5; color: #7A8794">Een huis met zonnepanelen dat op een dag 10 kWh verbruikt, zonder en met een thuisbatterij. Jouw percentages hangen af van je verbruik, je opwek en de grootte van de batterij.</p>
 <svg viewBox="0 0 460 460" role="img" aria-label="Vergelijking van je stroomverbruik per drie uur: zonder maatregelen 43 procent zelfvoorzienend, met een batterij 85 procent" style="width: 100%; height: auto; display: block">
   <rect x="0" y="0" width="460" height="460" rx="14" fill="#F4F7FA"></rect>
 
@@ -223,7 +264,7 @@
 <section id="hoe" style="background: #FFFFFF; padding: 64px 0">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 var(--gutter)">
 <h2 style="margin: 0 0 8px; font-size: clamp(26px, 3.4vw, 36px); font-weight: 800">Zo werkt het</h2>
-<p style="margin: 0 0 32px; color: #3D4A5C; max-width: 680px">Na de eerste stap zie je al wat je verbruikt. Aan het eind weet je of een batterij, een warmtepomp of alleen een andere instelling het meeste oplevert &mdash; en of je het rapport samen doornemen wilt.</p>
+<p style="margin: 0 0 32px; color: #3D4A5C; max-width: 680px">Na de eerste stap zie je al wat je verbruikt. Aan het eind weet je of een batterij, een warmtepomp of alleen een andere instelling het meeste oplevert, en of je het rapport samen doornemen wilt.</p>
 
 <ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 32px">
 <li style="display: flex; flex-direction: column; gap: 8px">
@@ -257,8 +298,8 @@
 <section style="max-width: 1240px; margin: 0 auto; padding: 64px var(--gutter) 0">
 <div style="background: #151A21; color: #EEF2F6; border-radius: 18px; padding: 40px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center">
 <div style="flex: 1 1 380px; min-width: 0">
-<h2 style="margin: 0; font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; color: #FFFFFF; line-height: 1.12">Eerlijk onafhankelijk advies</h2>
-<p style="margin: 16px 0 0; font-size: 19px; color: #C7D1DB; max-width: 520px">Bij het rapport zit een uitnodiging voor een schouw: één keer rustig kijken wat er in jouw huis kan. Geen verkoopgesprek en geen verplichting.</p>
+<h2 style="margin: 0; font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; color: #FFFFFF; line-height: 1.12">De schouw is een uitnodiging</h2>
+<p style="margin: 16px 0 0; font-size: 19px; color: #C7D1DB; max-width: 520px">Bij het rapport zit een uitnodiging voor een schouw: één keer rustig kijken wat er in jouw huis kan, met je eigen verbruik uit het rapport erbij. Geen verkoopgesprek en geen verplichting.</p>
 </div>
 <div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
 <div style="display: flex; gap: 12px; align-items: flex-start">
@@ -271,7 +312,7 @@
 </div>
 <div style="display: flex; gap: 12px; align-items: flex-start">
 <span style="width: 26px; height: 26px; border-radius: 50%; background: rgba(22,190,125,.16); display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; margin-top: 2px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#16BE7D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
-<span style="font-size: 17px; color: #EEF2F6">De schouw is een uitnodiging, geen verplichting</span>
+<span style="font-size: 17px; color: #EEF2F6">Je hoeft die dag niets te beslissen</span>
 </div>
 </div>
 </div>
@@ -282,7 +323,7 @@
 <h2 style="margin: 0 0 8px; font-size: clamp(26px, 3.4vw, 36px); font-weight: 800">Bestellen</h2>
 <p style="margin: 0 0 28px; color: #3D4A5C; max-width: 680px">Eén product, één prijs. Het rapport zit erbij in; je betaalt niet per rapport.</p>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px; align-items: start">
+<div class="bestelgrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 24px; align-items: start">
 
 <!-- formulier -->
 <form id="bestelform" style="background: #FFFFFF; border-radius: 18px; padding: 26px">
@@ -317,12 +358,13 @@
 
 <label style="display: flex; gap: 10px; align-items: flex-start; margin-top: 18px; font-size: 14px; color: #3D4A5C; cursor: pointer">
 <input id="akkoord" name="akkoord" type="checkbox" required style="width: 18px; height: 18px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #16BE7D">
-<span>Ik ga ermee akkoord dat Offgrid mijn verbruiksgegevens gebruikt om het maatregelenrapport te maken.</span>
+<span>Ik ga akkoord met de <a href="algemene-voorwaarden.html" style="color: #1A6E9E">algemene voorwaarden</a> en de <a href="privacyverklaring.html" style="color: #1A6E9E">privacyverklaring</a>, en met het gebruik van mijn verbruiksgegevens voor het maatregelenrapport.</span>
 </label>
 
 <button id="bestelknop" type="submit" style="margin-top: 20px; width: 100%; font: inherit; font-size: 18px; font-weight: 700; padding: 15px 24px; background: #16BE7D; color: #151A21; border: 0; border-radius: 8px; cursor: pointer">Afrekenen</button>
 <p id="bestelfout" role="alert" hidden style="margin: 12px 0 0; font-size: 15px; font-weight: 600; color: #B3261E"></p>
-<p style="margin: 12px 0 0; font-size: 13px; color: #7A8794; text-align: center">Betalen met iDEAL · 14 dagen bedenktijd</p>
+<p style="margin: 12px 0 0; font-size: 13px; color: #7A8794; text-align: center">Binnen twee werkdagen in huis · Betaling via Mollie · 14 dagen bedenktijd</p>
+<p style="margin: 6px 0 0; font-size: 13px; color: #7A8794; text-align: center"><a href="algemene-voorwaarden.html" style="color: #3D4A5C">algemene voorwaarden</a> · <a href="privacyverklaring.html" style="color: #3D4A5C">privacyverklaring</a></p>
 </form>
 
 <!-- samenvatting -->
@@ -339,18 +381,12 @@
 <div style="display: flex; justify-content: space-between; padding: 14px 0; font-size: 15px; color: #C7D1DB">
 <span>HomeWizard P1-meter</span><span>€ 45,00</span>
 </div>
-<div style="display: flex; justify-content: space-between; padding: 0 0 14px; font-size: 15px; color: #C7D1DB">
-<span>Maatregelenrapport</span><span>inbegrepen</span>
-</div>
-<div style="display: flex; justify-content: space-between; padding: 0 0 14px; font-size: 15px; color: #C7D1DB">
-<span>Verzending</span><span>inbegrepen</span>
-</div>
 
 <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 16px; border-top: 1px solid rgba(238,242,246,.18)">
 <span style="font-weight: 700; color: #FFFFFF">Totaal</span>
 <span style="font-size: 26px; font-weight: 800; color: #FFFFFF">€ 45,00</span>
 </div>
-<p style="margin: 14px 0 0; font-size: 13px; color: #8B98A5">Inclusief btw. Je betaalt één keer; er is geen abonnement.</p>
+<p style="margin: 14px 0 0; font-size: 13px; color: #8B98A5">Inclusief btw.</p>
 </aside>
 
 </div>
@@ -362,13 +398,13 @@
 <h2 style="margin: 0 0 24px; font-size: clamp(26px, 3.4vw, 36px); font-weight: 800">Vragen over dit product</h2>
 
 <details style="border-bottom: 1px solid #E3EAF1; padding: 16px 0">
-<summary style="cursor: pointer; font-weight: 700; font-size: 18px; list-style: none">Heb ik een slimme meter nodig?</summary>
-<p style="margin: 10px 0 0; color: #3D4A5C">Ja, met een vrije P1-poort. Vrijwel elke slimme meter in Nederland heeft die. Weet je het niet zeker, stuur dan een foto van je meterkast mee met je bestelling; we kijken ernaar voordat we verzenden.</p>
+<summary style="cursor: pointer; font-weight: 700; font-size: 18px; list-style: none">Heb ik een vrije P1-poort nodig?</summary>
+<p style="margin: 10px 0 0; color: #3D4A5C">Ja. Vrijwel elke slimme meter in Nederland heeft een P1-poort, en die is meestal vrij. Weet je het niet zeker, stuur dan een foto van je meterkast mee met je bestelling. We kijken ernaar voordat we verzenden.</p>
 </details>
 
 <details style="border-bottom: 1px solid #E3EAF1; padding: 16px 0">
 <summary style="cursor: pointer; font-weight: 700; font-size: 18px; list-style: none">Wat als ik de meter niet zelf wil plaatsen?</summary>
-<p style="margin: 10px 0 0; color: #3D4A5C">Dan zetten we hem voor je neer tijdens een bezoek. Dat kost extra en reken je af op de factuur, niet hier.</p>
+<p style="margin: 10px 0 0; color: #3D4A5C">Dan zetten we hem voor je neer tijdens een bezoek. Dat kost extra en dat reken je later af op de factuur.</p>
 </details>
 
 <details style="border-bottom: 1px solid #E3EAF1; padding: 16px 0">
