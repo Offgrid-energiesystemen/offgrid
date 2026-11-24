@@ -5,7 +5,7 @@
   // Lokaal testen praat met de lokale dienst; online met de Funnel-URL.
   var lokaal = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
   var EIND = lokaal
-    ? 'http://127.0.0.1:8447/api/bestelling'
+    ? 'http://127.0.0.1:8446/api/bestelling'
     : 'https://offgrid-vm.tailba5fd4.ts.net/betaal/api/bestelling';
   var form = document.getElementById('bestelform');
   var knop = document.getElementById('bestelknop');
@@ -33,7 +33,8 @@
       telefoon: form.tel.value.trim(),
       adres: form.adres.value.trim(),
       postcode: form.pc.value.trim(),
-      plaats: form.plaats.value.trim()
+      plaats: form.plaats.value.trim(),
+      akkoord: form.akkoord.checked
     };
 
     knop.disabled = true;
