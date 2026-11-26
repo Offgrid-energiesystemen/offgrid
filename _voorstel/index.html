@@ -156,7 +156,7 @@
  ]
 }
 </script>
-<link rel="stylesheet" href="assets/style.css?v=1795698497">
+<link rel="stylesheet" href="assets/style.css?v=20261127">
 </head>
 <body>
 
@@ -165,7 +165,7 @@
 <header class="hdr">
   <div class="wrap">
     <a href="index.html"><img src="../assets/images/logo-donker.png" alt="Offgrid energiesystemen"></a>
-    <nav><a href="bespaarcheck.html">Bespaarcheck</a><a href="index.html#diensten">Diensten</a><a href="systeem.html">Zo werkt het</a><a href="index.html#aanpak">Aanpak</a><a href="index.html#over-ons">Over ons</a><a href="index.html#vragen">Vragen</a></nav>
+    <nav><a href="bespaarcheck.html">Bespaarcheck</a><a href="index.html#diensten">Diensten</a><a href="systeem.html">Zo werkt het</a><a href="index.html#aanpak">Aanpak</a><a href="index.html#over-ons">Over ons</a><a href="index.html#vragen">Vragen</a><a href="#contact">Contact</a></nav>
     <a class="knop" href="slimme-meter.html">Ik wil direct inzicht</a>
   </div>
 </header>
@@ -515,6 +515,79 @@
   </div>
 </section>
 
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Benieuwd wat jij kunt <em>besparen</em>?</h2>
+    <p class="lead">Plan een vrijblijvend adviesgesprek. We kijken samen naar je woning en laten zien welke stappen het meeste opleveren.</p>
+    <div class="contact-grid">
+      <div class="cinfo">
+        <dl>
+          <dt>Telefoon</dt>
+          <dd><a href="tel:+31631917791">+31 (0)6 31 91 77 91</a></dd>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:info@offgridenergiesystemen.nl">info@offgridenergiesystemen.nl</a></dd>
+          <dt>Werkgebied</dt>
+          <dd>Regio Noord-Holland</dd>
+        </dl>
+        <p>Liever zelf beginnen? Met de P1-meter meet je dertig dagen en ontvang je een adviesrapport met de maatregelen die voor jou het meeste opleveren.</p>
+      </div>
+      <div>
+        <form class="contactform cform" action="https://formsubmit.co/info@offgridenergiesystemen.nl" method="POST">
+          <input type="hidden" name="_subject" value="Nieuwe aanvraag via offgridenergiesystemen.nl">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_autoresponse" value="Bedankt voor je aanvraag bij Offgrid energiesystemen. We hebben je bericht goed ontvangen en nemen zo snel mogelijk contact met je op om je situatie te bespreken. Heb je in de tussentijd een vraag? Beantwoord dan gewoon deze e-mail of mail naar info@offgridenergiesystemen.nl. Met vriendelijke groet, Offgrid energiesystemen">
+          <input type="hidden" name="_next" value="https://www.offgridenergiesystemen.nl/#contact">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honing">
+          <div>
+            <label for="c-naam">Naam <span class="verplicht">*</span></label>
+            <input id="c-naam" name="naam" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="c-email">E-mailadres <span class="verplicht">*</span></label>
+            <input id="c-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="c-tel">Telefoonnummer</label>
+            <input id="c-tel" name="telefoon" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="c-postcode">Postcode</label>
+            <input id="c-postcode" name="postcode" type="text" autocomplete="postal-code">
+          </div>
+          <div class="vol">
+            <label for="c-interesse">Waar ben je in geïnteresseerd?</label>
+            <select id="c-interesse" name="interesse">
+              <option>Een complete slimme energie-installatie</option>
+              <option>Een thuisbatterij</option>
+              <option>Domotica</option>
+              <option>Ik weet het nog niet, ik wil advies</option>
+            </select>
+          </div>
+          <div class="vol">
+            <label for="c-bericht">Je vraag of situatie</label>
+            <textarea id="c-bericht" name="bericht" rows="4"></textarea>
+          </div>
+          <div class="vol">
+            <button class="knop" type="submit">Verstuur aanvraag</button>
+          </div>
+          <p class="cform-klein vol">Velden met <span class="verplicht">*</span> zijn verplicht. We gebruiken je gegevens alleen om contact met je op te nemen over je aanvraag. Voor onze opdrachten gelden onze <a href="algemene-voorwaarden.html">algemene voorwaarden</a>.</p>
+          <p class="cstatus vol" role="status" aria-live="polite" hidden></p>
+        </form>
+        <div class="cdone" tabindex="-1" hidden>
+          <svg width="52" height="52" viewBox="0 0 56 56" aria-hidden="true"><rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="#16BE7D"></rect><path d="M19 28.5l6 6 12-13" fill="none" stroke="#151A21" stroke-width="4" stroke-linecap="square"></path></svg>
+          <h3>Bedankt<span class="cdone-naam"></span>, je aanvraag is verstuurd</h3>
+          <p class="cdone-mail"></p>
+          <p>Je hoeft niets meer te doen. We nemen zo snel mogelijk contact met je op.</p>
+          <button class="knop stil cdone-opnieuw" type="button">Nog een aanvraag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <footer class="voet">
@@ -526,5 +599,6 @@
 </footer>
 
 <script src="../assets/js/main.js"></script>
+<script src="assets/js/contact.js?v=20261126" defer></script>
 </body>
 </html>
