@@ -537,5 +537,14 @@ html{scroll-padding-top:112px}
 .optie-kaart > .knop{margin-top:auto}
 
 @media (max-width:640px){
-  .optie-kaart .knop{font-size:13.5px;padding:13px 16px;letter-spacing:0;white-space:nowrap}
+  .optie-kaart .knop,
+  #meter .doos .knop,
+  #afspraak .doos .knop{font-size:13.5px;padding:13px 16px;letter-spacing:0}
+}
+
+/* noot onder de knop in een lichte doos: was wit op wit en dus onzichtbaar */
+.doos-noot{font-size:13.5px;color:var(--muted);margin:16px 0 0;text-align:center;line-height:1.5}
+
+@media (max-width:400px){
+  #meter .doos .knop{font-size:12.5px;padding:12px 10px}
 }
