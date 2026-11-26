@@ -542,17 +542,17 @@ html{scroll-padding-top:112px}
 .optie-kaart > .knop{margin-top:auto}
 
 @media (max-width:640px){
-  .optie-kaart .knop,
-  #meter .doos .knop,
-  #afspraak .doos .knop{font-size:13.5px;padding:13px 16px;letter-spacing:0}
+  #bestellen .doos > .knop,
+  #afspraak .doos > .knop{font-size:13.5px;padding:13px 16px;letter-spacing:0}
+}
+@media (max-width:400px){
+  #bestellen .doos > .knop{font-size:12px;padding:12px 10px}
 }
 
 /* noot onder de knop in een lichte doos: was wit op wit en dus onzichtbaar */
 .doos-noot{font-size:13.5px;color:var(--muted);margin:16px 0 0;text-align:center;line-height:1.5}
 
-@media (max-width:400px){
-  #meter .doos .knop{font-size:12.5px;padding:12px 10px}
-}
+
 
 /* het bestelformulier hoort bij de meter ernaast, niet in een eigen blok */
 .bestel-gegevens{margin-top:32px;padding-top:28px;border-top:1px solid var(--rand)}
@@ -566,5 +566,10 @@ html{scroll-padding-top:112px}
 .veld-hint{font-size:13px;color:var(--muted);margin:-4px 0 0;line-height:1.5}
 .veld-hint:empty{display:none}
 
-/* zonder knop eronder is de ondermarge van de lijst te veel */
-#bestellen .doos > ul:last-child{margin-bottom:0}
+/* de knop onderaan het kader, zodat meter en afspraak gelijk uitlijnen */
+#bestellen .doos,
+#afspraak .doos{display:flex;flex-direction:column}
+#bestellen .doos > .knop,
+#afspraak .doos > .knop{margin-top:auto}
+#bestellen .doos > ul,
+#afspraak .doos > ul{margin-bottom:26px}
