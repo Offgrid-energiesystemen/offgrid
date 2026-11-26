@@ -506,3 +506,16 @@ main p,main li,main a{overflow-wrap:break-word}
    op een breed scherm en 75 op een smal scherm. */
 html{scroll-padding-top:112px}
 @media (max-width:900px){html{scroll-padding-top:88px}}
+
+/* ---------- Afspraakband op de P1-meter-pagina ---------- */
+.sectie.afspraak{background:var(--donker);color:#fff}
+.sectie.afspraak h2{color:#fff}
+.sectie.afspraak .eyebrow{color:rgba(255,255,255,.55)}
+.sectie.afspraak .lead{color:rgba(255,255,255,.80)}
+.sectie.afspraak .vinkjes li{color:rgba(255,255,255,.86)}
+.sectie.afspraak .doos{background:var(--donker2);border-color:rgba(255,255,255,.15)}
+.sectie.afspraak .doos .lbl{color:var(--groen)}
+.sectie.afspraak .doos .prijs{color:#fff}
+.sectie.afspraak .doos .bij{color:rgba(255,255,255,.72)}
+.sectie.afspraak .doos li{color:rgba(255,255,255,.86)}
+.sectie.afspraak .doos li::before{background:var(--groen)}
