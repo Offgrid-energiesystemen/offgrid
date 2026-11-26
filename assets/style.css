@@ -141,7 +141,13 @@ p{margin:0 0 14px}
 .veld{width:100%;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.22);color:#fff;font-family:inherit;font-size:15.5px;padding:12px 0;margin-bottom:22px}
 .veld::placeholder{color:#7C8A98}
 .voet{background:var(--donker);border-top:1px solid rgba(255,255,255,.10);color:#8C9BA9}
-.voet .wrap{display:flex;gap:32px;flex-wrap:wrap;align-items:center;padding-top:28px;padding-bottom:34px;font-size:13px}
+.voet .wrap{display:block;padding-top:30px;padding-bottom:34px;font-size:13px}
+.voet-links{display:flex;gap:10px 32px;flex-wrap:wrap;padding-bottom:26px;border-bottom:1px solid rgba(255,255,255,.10)}
+.voet-links a{color:#C6D2DE;text-decoration:none;font-size:14px}
+.voet-links a:hover{color:#fff}
+.voet-onder{display:flex;gap:32px;flex-wrap:wrap;align-items:center;padding-top:26px}
+.voet-juridisch{margin-left:auto}
+@media (max-width:640px){.voet-onder{gap:18px}.voet-juridisch{margin-left:0;width:100%}}
 .voet img{height:30px;width:auto;opacity:.85}
 
 .uitleg{max-width:1240px;margin:0 auto;padding:52px 40px 0}
