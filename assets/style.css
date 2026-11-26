@@ -523,3 +523,15 @@ html{scroll-padding-top:112px}
 .contact-cta .knop{width:100%;justify-content:center}
 .contact-cta .klein{font-size:13.5px;color:rgba(255,255,255,.55);margin:16px 0 0;text-align:center;line-height:1.6}
 @media (max-width:900px){.contact-cta{padding:30px 26px}}
+
+/* prijsregel in een kaart, naast de bestaande prijsblokken */
+.kaart-prijs{font-size:34px;font-weight:400;letter-spacing:-.02em;color:var(--donker);margin:0 0 16px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.kaart-prijs span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.kaart-prijs.gratis{color:var(--groen)}
+@media (max-width:640px){.kaart-prijs{font-size:28px}}
+
+/* de twee optiekaarten: inhoud boven, knop onderaan op gelijke hoogte */
+.optie-kaart{display:flex;flex-direction:column}
+.optie-kaart ul{margin-bottom:0}
+.optie-kaart .knop{margin-top:auto}
+.optie-kaart > .knop{margin-top:auto}
