@@ -563,5 +563,9 @@ html{scroll-padding-top:112px}
 .veld-hint{font-size:13px;color:var(--muted);margin:-4px 0 0;line-height:1.5}
 .veld-hint:empty{display:none}
 
-/* zonder knop eronder is de ondermarge van de lijst te veel */
-#bestellen .doos > ul:last-child{margin-bottom:0}
+/* de kaders eindigen met de lijst, niet met een knop */
+#bestellen .doos > ul:last-child,
+#afspraak .doos > ul:last-child{margin-bottom:0}
+
+/* toelichting onder een knop in de tekstkolom */
+.knop-noot{font-size:13.5px;color:var(--muted);margin:12px 0 0;line-height:1.5;max-width:46ch}
