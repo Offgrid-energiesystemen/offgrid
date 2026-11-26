@@ -500,3 +500,9 @@ main p,main li,main a{overflow-wrap:break-word}
 .sectie .cdone h3{color:var(--donker)}
 .sectie .cdone p{color:var(--tekst)}
 .sectie .cdone .knop.stil{color:var(--blauw);border-color:rgba(26,110,158,.4)}
+
+/* De header blijft bovenaan staan; bij een sprong naar een anker moet de
+   eerste regel niet achter de header schuiven. De header is 98 pixels hoog
+   op een breed scherm en 75 op een smal scherm. */
+html{scroll-padding-top:112px}
+@media (max-width:900px){html{scroll-padding-top:88px}}
