@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="https://www.offgridenergiesystemen.nl/assets/images/og-image.jpg">
 <meta name="theme-color" content="#151A21">
 <link rel="canonical" href="https://www.offgridenergiesystemen.nl/slimme-meter.html">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co https://api.pdok.nl; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -56,7 +56,7 @@
  ]
 }
 </script>
-<link rel="stylesheet" href="assets/style.css?v=20261207">
+<link rel="stylesheet" href="assets/style.css?v=20261208">
 </head>
 <body>
 
@@ -242,7 +242,9 @@
         <div><label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" required></div>
         <div><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
         <div><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required></div>
-        <div class="vol"><label for="adres">Adres</label><input id="adres" name="adres" type="text" autocomplete="street-address" required></div>
+        <div><label for="woonplaats">Woonplaats</label><input id="woonplaats" name="woonplaats" type="text" autocomplete="address-level2" required></div>
+        <div><label for="adres">Adres</label><input id="adres" name="adres" type="text" autocomplete="street-address" required></div>
+        <p class="veld-hint vol" id="postcode-hint">Vul je postcode in, dan zoeken we de woonplaats erbij.</p>
         <div class="vol"><label for="opmerking">Iets dat we moeten weten? (optioneel)</label><textarea id="opmerking" name="opmerking"></textarea></div>
         <div class="vol"><button class="knop" type="submit">Bestel de meter en ontvang het rapport &middot; &euro; 45,00</button></div>
       </form>
@@ -311,6 +313,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/postcode.js?v=20261208"></script>
 <script src="assets/js/grafiek.js"></script>
 </body>
 </html>

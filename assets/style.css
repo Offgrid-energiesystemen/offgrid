@@ -564,3 +564,7 @@ html{scroll-padding-top:112px}
   .bestel-gegevens{margin-top:44px;padding-top:34px}
   .bestel-gegevens h3{font-size:24px}
 }
+
+/* hint onder een formulierveld */
+.veld-hint{font-size:13px;color:var(--muted);margin:-4px 0 0;line-height:1.5}
+.veld-hint:empty{display:none}
