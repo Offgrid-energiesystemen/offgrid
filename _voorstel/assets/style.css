@@ -30,7 +30,8 @@ p{margin:0 0 14px}
 .tekstlink{font-size:14.5px;color:inherit;border-bottom:1px solid rgba(0,0,0,.3);padding-bottom:3px}
 .donker .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
 
-.hdr{background:var(--donker);border-bottom:1px solid rgba(255,255,255,.10)}
+.hdr{background:var(--donker);border-bottom:1px solid rgba(255,255,255,.10);
+  position:sticky;top:0;z-index:100}
 .hdr .wrap{display:flex;align-items:center;gap:36px;padding-top:22px;padding-bottom:22px}
 .hdr img{height:40px;width:auto;display:block}
 .hdr nav{display:flex;gap:30px;margin-left:auto;font-size:13.5px;letter-spacing:.015em;color:#AEBAC6}
@@ -437,3 +438,8 @@ main p,main li,main a{overflow-wrap:break-word}
 /* draaiende molenbladen in de hero */
 .og-spin{transform-box:view-box;animation:og-spin 9s linear infinite}
 @media (prefers-reduced-motion: reduce){.og-spin{animation:none}}
+
+/* De header blijft bovenaan staan; bij een sprong naar een anker moet de
+   eerste regel niet achter de header schuiven. */
+html{scroll-padding-top:112px}
+@media (max-width:900px){html{scroll-padding-top:88px}}
