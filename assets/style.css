@@ -507,15 +507,13 @@ main p,main li,main a{overflow-wrap:break-word}
 html{scroll-padding-top:112px}
 @media (max-width:900px){html{scroll-padding-top:88px}}
 
-/* ---------- Afspraakband op de P1-meter-pagina ---------- */
-.sectie.afspraak{background:var(--donker);color:#fff}
-.sectie.afspraak h2{color:#fff}
-.sectie.afspraak .eyebrow{color:rgba(255,255,255,.55)}
-.sectie.afspraak .lead{color:rgba(255,255,255,.80)}
-.sectie.afspraak .vinkjes li{color:rgba(255,255,255,.86)}
-.sectie.afspraak .doos{background:var(--donker2);border-color:rgba(255,255,255,.15)}
-.sectie.afspraak .doos .lbl{color:var(--groen)}
-.sectie.afspraak .doos .prijs{color:#fff}
-.sectie.afspraak .doos .bij{color:rgba(255,255,255,.72)}
-.sectie.afspraak .doos li{color:rgba(255,255,255,.86)}
-.sectie.afspraak .doos li::before{background:var(--groen)}
+/* ---------- Verwijzing naar de contactpagina, in de donkere contactband ---------- */
+.contact-cta{border:1px solid rgba(255,255,255,.15);background:var(--donker2);padding:38px 40px}
+.contact-cta .lbl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--groen);margin:0 0 14px}
+.contact-cta h3{font-size:26px;font-weight:500;margin:0 0 20px;color:#fff;letter-spacing:-.01em}
+.contact-cta ul{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:12px}
+.contact-cta li{font-size:15.5px;line-height:1.6;padding-left:26px;position:relative;color:rgba(255,255,255,.86)}
+.contact-cta li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;background:var(--groen);transform:rotate(45deg)}
+.contact-cta .knop{width:100%;justify-content:center}
+.contact-cta .klein{font-size:13.5px;color:rgba(255,255,255,.55);margin:16px 0 0;text-align:center;line-height:1.6}
+@media (max-width:900px){.contact-cta{padding:30px 26px}}
