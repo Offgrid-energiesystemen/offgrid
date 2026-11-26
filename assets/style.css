@@ -569,3 +569,12 @@ html{scroll-padding-top:112px}
 
 /* toelichting onder een knop in de tekstkolom */
 .knop-noot{font-size:13.5px;color:var(--muted);margin:12px 0 0;line-height:1.5;max-width:46ch}
+
+/* akkoord met de voorwaarden, bij het bestelformulier */
+.akkoordveld{margin-top:2px}
+.vink{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--tekst);line-height:1.55;cursor:pointer}
+.vink input{margin:3px 0 0;flex:0 0 auto;width:16px;height:16px;accent-color:var(--groen);cursor:pointer}
+.vink a{color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)}
+
+/* melding als het bestellen niet lukt */
+.bestelfout{margin:16px 0 0;padding:12px 14px;border-left:3px solid #b3352a;background:#fdf4f3;color:#8d2a21;font-size:14px;line-height:1.5}
