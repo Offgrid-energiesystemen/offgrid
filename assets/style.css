@@ -433,8 +433,13 @@ main p,main li,main a{overflow-wrap:break-word}
 .og-hot span{transition:scale .2s ease}
 .og-hot:hover span{scale:1.35!important}
 .og-hot[aria-pressed="true"] span{scale:1.5!important;box-shadow:0 0 0 4px rgba(22,190,125,.28)}
-.og-tab[aria-selected="true"]{background:#151A21!important;color:#FFFFFF!important;border-color:#151A21!important}
-.og-tab:hover{border-color:#151A21!important}
+.og-tab{font:inherit;font-size:14.5px;font-weight:600;letter-spacing:.01em;min-height:44px;
+  padding:10px 16px;border-radius:2px;cursor:pointer;
+  background:var(--wit);color:var(--tekst);border:1px solid var(--rand);
+  transition:border-color .15s,background .15s,color .15s}
+.og-tab:hover{border-color:var(--donker);color:var(--donker)}
+.og-tab:focus-visible{outline:2px solid var(--groen);outline-offset:2px}
+.og-tab[aria-selected="true"]{background:var(--donker);color:#fff;border-color:var(--donker)}
 @media (max-width:760px){#team-panel{padding:22px 18px 24px!important}}
 
 /* het hidden-attribuut moet altijd winnen van een inline display */
