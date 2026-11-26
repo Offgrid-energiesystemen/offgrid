@@ -535,3 +535,7 @@ html{scroll-padding-top:112px}
 .optie-kaart ul{margin-bottom:0}
 .optie-kaart .knop{margin-top:auto}
 .optie-kaart > .knop{margin-top:auto}
+
+@media (max-width:640px){
+  .optie-kaart .knop{font-size:13.5px;padding:13px 16px;letter-spacing:0;white-space:nowrap}
+}
