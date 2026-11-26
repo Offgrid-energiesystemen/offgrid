@@ -565,3 +565,6 @@ html{scroll-padding-top:112px}
 /* hint onder een formulierveld */
 .veld-hint{font-size:13px;color:var(--muted);margin:-4px 0 0;line-height:1.5}
 .veld-hint:empty{display:none}
+
+/* zonder knop eronder is de ondermarge van de lijst te veel */
+#bestellen .doos > ul:last-child{margin-bottom:0}
