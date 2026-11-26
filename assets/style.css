@@ -374,7 +374,7 @@ main p,main li,main a{overflow-wrap:break-word}
 
 /* systeem: schema + detailpaneel */
 .og-sys{display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch}
-.og-sys-schema{flex: 1 1 560px; min-width: 0; background: #FFFFFF; padding: 28px 20px 40px}
+.og-sys-schema{flex: 1 1 320px; min-width: 0; background: #FFFFFF; padding: 28px 20px 40px}
 .og-sys-panel{flex: 1 1 320px; min-width: 0; background: #151A21; color: #FFFFFF; padding: 24px; display: grid}
 /* alle varianten staan in dezelfde gridcel: het paneel is altijd zo hoog als de hoogste */
 .og-pv{grid-area: 1 / 1; display: flex; flex-direction: column; gap: 16px; visibility: hidden}
@@ -399,7 +399,7 @@ main p,main li,main a{overflow-wrap:break-word}
 .og-hublabel{position: absolute; top: 100%; margin-top: 30%; font-size: clamp(10px, 1.8cqw, 13px); font-weight: 600; color: #4A5668; white-space: nowrap}
 @keyframes og-dia2{0%,100%{transform: rotate(45deg) scale(1)}50%{transform: rotate(45deg) scale(1.18)}}
 .og-dia{animation: og-dia2 3.2s ease-in-out infinite}
-@container (max-width: 560px){.og-box{aspect-ratio: 4/5}.og-sq{width: 22cqw; border-width: 1.5px}.og-hub{width: 16cqw}.og-v{font-size: 4cqw}.og-l,.og-hublabel{font-size: 3cqw}.og-tag{font-size: 11px; padding: 0 4px}.og-tx{display: none}}
+@container (max-width: 500px){.og-box{aspect-ratio: 4/5}.og-sq{width: 22cqw; border-width: 1.5px}.og-hub{width: 16cqw}.og-v{font-size: 4cqw}.og-l,.og-hublabel{font-size: 3cqw}.og-tag{font-size: 11px; padding: 0 4px}.og-tx{display: none}}
 
 .og-ph{display: flex; align-items: center; gap: 12px}
 .og-ph .og-i{width: 32px; color: #16BE7D}
@@ -578,3 +578,16 @@ html{scroll-padding-top:112px}
 
 /* melding als het bestellen niet lukt */
 .bestelfout{margin:16px 0 0;padding:12px 14px;border-left:3px solid #b3352a;background:#fdf4f3;color:#8d2a21;font-size:14px;line-height:1.5}
+
+/* de rij onder de tegels volgt hetzelfde vierkolomsraster als de tegels,
+   zodat de rand van de grote kaart samenvalt met de rand tussen tegel 2 en 3 */
+.og-rij{display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px}
+.og-rij-a{grid-column: 1 / 4; min-width: 0; display: flex; flex-direction: column}
+.og-rij-b{grid-column: 4 / 5; min-width: 0; display: flex; flex-direction: column}
+@media (max-width: 900px){
+  .og-rij{grid-template-columns: 1fr}
+  .og-rij-a, .og-rij-b{grid-column: 1 / -1}
+}
+
+/* het laatste kengetal in het groen, net als de accenten elders */
+.og-tile:last-child .og-tv{color: var(--groen)}
