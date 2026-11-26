@@ -1,163 +1,74 @@
-<!doctype html>
-<html lang="nl" class="no-js">
+<!DOCTYPE html>
+<html lang="nl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Zo werkt een slim energiesysteem thuis | Offgrid</title>
-<meta name="description" content="Zie hoe zonnepanelen, thuisbatterij, warmtepomp en laadpaal samenwerken als één systeem, aangestuurd door een slimme regeling. Interactief voorbeeld.">
-<link rel="canonical" href="https://www.offgridenergiesystemen.nl/systeem.html">
+<title>Zo werkt het · Offgrid energiesystemen</title>
+<meta name="description" content="Hoe zonnepanelen, omvormer, thuisbatterij, warmtepomp en laadpaal samenwerken als één systeem.">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Offgrid energiesystemen">
-<meta property="og:title" content="Zo werkt een slim energiesysteem thuis | Offgrid">
-<meta property="og:description" content="Zie hoe zonnepanelen, thuisbatterij, warmtepomp en laadpaal samenwerken als één systeem, aangestuurd door een slimme regeling. Interactief voorbeeld.">
+<meta property="og:title" content="Zo werkt het · Offgrid energiesystemen">
+<meta property="og:description" content="Hoe zonnepanelen, omvormer, thuisbatterij, warmtepomp en laadpaal samenwerken als één systeem.">
 <meta property="og:url" content="https://www.offgridenergiesystemen.nl/systeem.html">
 <meta property="og:image" content="https://www.offgridenergiesystemen.nl/assets/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Offgrid energiesystemen – Je huis als één werkend systeem">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zo werkt het · Offgrid energiesystemen">
+<meta name="twitter:description" content="Hoe zonnepanelen, omvormer, thuisbatterij, warmtepomp en laadpaal samenwerken als één systeem.">
+<meta name="twitter:image" content="https://www.offgridenergiesystemen.nl/assets/images/og-image.jpg">
 <meta name="theme-color" content="#151A21">
-<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-<script src="assets/js/head.js?v=20261023"></script>
-<link rel="preload" href="assets/fonts/barlow-regular.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/barlow-extrabold.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=202610091215">
-<style>
-.og-demo{max-width: 1240px; margin: 0 auto; padding: 48px var(--gutter) 64px; display: flex; flex-direction: column; gap: 28px}
-.og-card{background: #FFFFFF; padding: 20px; display: flex; flex-direction: column; min-width: 0}
-.og-h3{margin: 0; font-size: 18px; font-weight: 800}
-.og-small{font-size: 14px; font-weight: 600; color: #4A5668}
-.og-key{display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: #4A5668}
-.og-key>span{width: 10px; height: 10px}
-.og-g24{display: grid; grid-template-columns: repeat(24, minmax(0, 1fr)); gap: 2px}
-.og-c{display: flex} .og-c>span{display: block; width: 100%}
-.og-grafiek{position: relative}
-.og-g24:focus-visible{outline: 3px solid #1A6E9E; outline-offset: 4px}
-.og-c.bij{background: #EEF2F6}
-.og-c{cursor: default}
-.og-nullijn{height: 2px; background: #151A21; margin: -10px 0}
-.og-tip{position: absolute; bottom: calc(100% + 8px); translate: -50% 0; z-index: 6; display: none; flex-direction: column; gap: 3px; width: max-content; min-width: 190px; max-width: min(280px, calc(100vw - 48px)); background: #151A21; color: #FFFFFF; padding: 12px 14px; box-shadow: 0 14px 30px rgba(28,37,55,.24); pointer-events: none; font-size: 13px; line-height: 1.45; text-align: left}
-.og-tip.on{display: flex}
-.og-tip-kop{font-weight: 800; font-size: 14px}
-.og-tip-rij{display: flex; justify-content: space-between; gap: 14px}
-.og-tip-rij>span:last-child{font-weight: 700; font-variant-numeric: tabular-nums}
-.og-tip-sub{padding-left: 10px; color: #A7B4C2}
-.og-tip-sub>span:last-child{font-weight: 600}
-.og-tiles{display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px}
-.og-tile{background: #FFFFFF; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px}
-.og-tv{font-size: 30px; font-weight: 800; line-height: 1.1}
-
-/* systeem: schema + detailpaneel */
-.og-sys{display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch}
-.og-sys-schema{flex: 1 1 560px; min-width: 0; background: #FFFFFF; padding: 28px 20px 40px}
-.og-sys-panel{flex: 1 1 320px; min-width: 0; background: #151A21; color: #FFFFFF; padding: 24px; display: grid}
-/* alle varianten staan in dezelfde gridcel: het paneel is altijd zo hoog als de hoogste */
-.og-pv{grid-area: 1 / 1; display: flex; flex-direction: column; gap: 16px; visibility: hidden}
-.og-pv.on{visibility: visible}
-.og-pf{container-type: inline-size; max-width: 680px; margin: 0 auto}
-.og-box{position: relative; aspect-ratio: 900/440}
-.og-lines{position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible}
-.og-lines g{transition: opacity .25s ease}
-.og-box.has-sel .og-lines g:not(.on){opacity: .25}
-.og-n{position: absolute; translate: -50% -50%; display: flex; flex-direction: column; align-items: center}
-.og-sq{font: inherit; cursor: pointer; width: 14cqw; aspect-ratio: 1; box-sizing: border-box; border: 4px solid; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4%; padding: 0; transition: transform .2s ease, box-shadow .2s ease}
-.og-sq:hover,.og-sq[aria-pressed="true"]{transform: translateY(-3px); box-shadow: 0 10px 24px rgba(28,37,55,.16)}
-.og-sq[aria-pressed="true"]{outline: 3px solid #16BE7D; outline-offset: 3px}
-.og-i{width: 26%; height: auto}
-.og-v{font-size: clamp(12px, 2.6cqw, 18px); font-weight: 800; line-height: 1; white-space: nowrap; color: #151A21; font-variant-numeric: tabular-nums}
-.og-l{font-size: clamp(10px, 1.8cqw, 13px); font-weight: 700; color: #4A5668; white-space: nowrap; line-height: 1}
-.og-tag{position: absolute; translate: -50% -50%; background: #FFFFFF; border: 1px solid #D3DCE5; padding: 1px 5px; font-size: 12px; line-height: 16px; font-weight: 700; white-space: nowrap; color: #151A21; font-variant-numeric: tabular-nums; pointer-events: none}
-.og-hub{cursor: pointer; width: 11cqw; aspect-ratio: 1; background: #151A21; border: 0; padding: 0; transform: rotate(45deg); display: flex; align-items: center; justify-content: center; transition: box-shadow .2s ease}
-.og-hub[aria-pressed="true"]{outline: 3px solid #16BE7D; outline-offset: 4px}
-.og-hub-in{transform: rotate(-45deg); display: grid; grid-template-columns: repeat(3, 1fr); gap: 12%; width: 34%}
-.og-hublabel{position: absolute; top: 100%; margin-top: 30%; font-size: clamp(10px, 1.8cqw, 13px); font-weight: 700; color: #4A5668; white-space: nowrap}
-@keyframes og-dia2{0%,100%{transform: rotate(45deg) scale(1)}50%{transform: rotate(45deg) scale(1.18)}}
-.og-dia{animation: og-dia2 3.2s ease-in-out infinite}
-@container (max-width: 560px){.og-box{aspect-ratio: 4/5}.og-sq{width: 22cqw; border-width: 3px}.og-hub{width: 16cqw}.og-v{font-size: 4cqw}.og-l,.og-hublabel{font-size: 3cqw}.og-tag{font-size: 11px; padding: 0 4px}.og-tx{display: none}}
-
-.og-ph{display: flex; align-items: center; gap: 12px}
-.og-ph .og-i{width: 32px; color: #16BE7D}
-.og-pt{margin: 0; font-size: 26px; font-weight: 800; line-height: 1.1}
-.og-status{display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #151A21; background: #16BE7D; padding: 4px 10px; align-self: flex-start}
-.og-status::before{content: ""; width: 8px; height: 8px; background: #151A21; animation: og-pulse 2.4s ease-in-out infinite}
-.og-role{margin: 0; color: #D0D2D5; font-size: 16px; line-height: 1.5}
-.og-dl{margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 0}
-.og-dl dt,.og-dl dd{margin: 0; padding: 9px 0; border-top: 1px solid #3D4A5C; font-size: 15px}
-.og-dl dt{color: #A7B4C2; font-weight: 500; padding-right: 16px}
-.og-dl dd{text-align: right; font-weight: 700; font-variant-numeric: tabular-nums}
-.og-voet{display: flex; align-items: center; gap: 8px; margin-top: auto; min-width: 0}
-.og-leeftijd{font-size: 13px; color: #A7B4C2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis}
-.og-ververs{flex: none; width: 22px; height: 22px; padding: 0; display: inline-flex; align-items: center; justify-content: center; background: transparent; border: 1px solid #3D4A5C; color: #D0D2D5; cursor: pointer; transition: color .2s ease, border-color .2s ease}
-.og-ververs svg{width: 14px; height: 14px}
-.og-ververs:hover{color: #FFFFFF; border-color: #16BE7D}
-.og-ververs:focus-visible{outline: 3px solid #16BE7D; outline-offset: 2px}
-.og-hint{font-size: 15px; color: #4A5668; margin: 0}
-.og-cta{background: #151A21; color: #FFFFFF}
-@media (prefers-reduced-motion: reduce){.og-sq,.og-lines g{transition: none}}
-</style>
-<script src="assets/js/main.js?v=202610091215" defer></script>
+<link rel="canonical" href="https://www.offgridenergiesystemen.nl/systeem.html">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<link rel="stylesheet" href="assets/style.css?v=20261130">
 </head>
 <body>
-<div class="og-root" style="font-family: 'Barlow', 'DIN Alternate', 'Helvetica Neue', sans-serif; color: #151A21; background: #EEF2F6; font-size: 18px; line-height: 1.55">
 
-<header style="position: sticky; top: 0; z-index: 20; background: #EEF2F6; border-bottom: 1px solid #D3DCE5">
-<div class="og-hdr-row" style="max-width: 1240px; margin: 0 auto; padding: 14px var(--gutter); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
-<a href="index.html" aria-label="Offgrid energiesystemen, naar de homepage" style="display: block; line-height: 0">
-<img src="assets/images/logo-licht.png" class="og-hdr-logo" alt="Offgrid energiesystemen" style="height: 58px; width: auto">
-</a>
-<nav class="og-nav" aria-label="Hoofdmenu" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; font-weight: 600; font-size: 17px">
-<a class="og-navlink" href="bespaarcheck.html" style="text-decoration: none; padding: 10px 0">Bespaarcheck</a>
-<a class="og-navlink" href="index.html#diensten" style="text-decoration: none; padding: 10px 0">Diensten</a>
-<a class="og-navlink" href="systeem.html" aria-current="page" style="text-decoration: none; padding: 10px 0; box-shadow: inset 0 -3px 0 #16BE7D">Zo werkt het</a>
-<a class="og-navlink" href="index.html#werkwijze" style="text-decoration: none; padding: 10px 0">Werkwijze</a>
-<a class="og-navlink" href="index.html#over-ons" style="text-decoration: none; padding: 10px 0">Over ons</a>
-<a class="og-navlink" href="index.html#vragen" style="text-decoration: none; padding: 10px 0">Vragen</a>
-<a class="og-btn og-hdr-cta" href="index.html#contact" style="text-decoration: none; padding: 12px 22px; background: #16BE7D; color: #151A21"><span class="og-lg">Plan een adviesgesprek</span><span class="og-sm">Adviesgesprek</span></a>
-<a class="og-btn og-hdr-cta" href="slimme-meter.html" style="text-decoration: none; padding: 12px 22px; background: #16BE7D; color: #151A21"><span class="og-lg">Ik wil direct inzicht</span><span class="og-sm">Direct inzicht</span></a>
-<button type="button" class="og-burger" aria-controls="og-mobile-menu" aria-expanded="false" aria-label="Menu openen" style="width: 48px; height: 48px; padding: 0; align-items: center; justify-content: center; cursor: pointer; background: transparent; color: #151A21; border: 2px solid #151A21"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
-</nav>
-</div>
-<nav id="og-mobile-menu" hidden class="og-mnav" aria-label="Mobiel menu" style="background: #EEF2F6; max-height: calc(100vh - 80px); overflow-y: auto; box-shadow: 0 12px 24px rgba(21,26,33,0.12)">
-<a href="index.html#besparen" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Zo ga je besparen</a>
-<a href="bespaarcheck.html" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Bespaarcheck</a>
-<a href="systeem.html" aria-current="page" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5; color: #1A6E9E">Zo werkt het</a>
-<a href="index.html#diensten" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Diensten</a>
-<a href="index.html#werkwijze" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Werkwijze</a>
-<a href="index.html#normen" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Veiligheid en normen</a>
-<a href="index.html#over-ons" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Over ons</a>
-<a href="index.html#vragen" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Veelgestelde vragen</a>
-<a href="index.html#contact" style="display: block; padding: 14px var(--gutter); font-size: 19px; font-weight: 600; text-decoration: none; border-top: 1px solid #D3DCE5">Contact</a>
-</nav>
+<header class="hdr">
+  <div class="wrap">
+    <a href="index.html"><img src="assets/images/logo-donker.png" alt="Offgrid energiesystemen"></a>
+    <nav><a href="bespaarcheck.html">Bespaarcheck</a><a href="index.html#diensten">Diensten</a><a href="systeem.html">Zo werkt het</a><a href="index.html#aanpak">Aanpak</a><a href="index.html#over-ons">Over ons</a><a href="index.html#vragen">Vragen</a><a href="contact.html">Contact</a></nav>
+    <a class="knop" href="slimme-meter.html">Ik wil direct inzicht</a>
+  </div>
 </header>
 
-<main class="og-demo">
-<div style="max-width: 680px; display: flex; flex-direction: column; gap: 10px">
-<h1 style="margin: 0; font-size: clamp(34px, 5vw, 48px); font-weight: 800; line-height: 1.06">Alles werkt samen.</h1>
-<p style="margin: 0; color: #3D4A5C">Eén slimme regeling stuurt je stroom op elk moment naar de beste plek. Door energie slim te gebruiken in plaats van alles groter te maken, blijven je verbruik en je teruglevering in balans en help je het net ontlasten. Kies een onderdeel voor de details.</p>
-</div>
+<main>
+<section class="pkop">
+  <div class="wrap">
+    <a class="terug" href="index.html">← Terug naar de homepage</a>
+    <p class="eyebrow">Hoe het samenspeelt</p>
+    <h1>Alles werkt <em>samen.</em></h1>
+    <p class="lead">Losse maatregelen lossen één probleem op. Een huis dat als één systeem werkt, lost het hele jaar door op — ook op de momenten dat je er niet aan denkt.</p>
+  </div>
+</section>
 
+
+
+<section class="og-root">
+  <div class="wrap">
 <section class="og-sys" aria-label="Interactief systeemschema">
-<div class="og-sys-schema"><div class="og-pf"><div class="og-box"><svg viewBox="0 0 900 440" preserveAspectRatio="none" class="og-lines" fill="none" aria-hidden="true"><g data-line="zon"><path d="M110 70 C300 70 300 220 450 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M110 70 C300 70 300 220 450 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="net"><path d="M450 220 L110 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 L110 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="bat"><path d="M450 220 C300 220 300 370 110 370" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 C300 220 300 370 110 370" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="wp"><path d="M450 220 C600 220 600 70 790 70" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 C600 220 600 70 790 70" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="huis"><path d="M450 220 L790 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 L790 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="auto"><path d="M450 220 C600 220 600 370 790 370" stroke="#A7B4C2" stroke-width="3" stroke-dasharray="3 8" vector-effect="non-scaling-stroke"></path></g></svg><span class="og-tag" data-tag="zon" style="left: 32.778%; top: 32.955%">–</span><span class="og-tag" data-tag="net" style="left: 31.111%; top: 50.000%">–</span><span class="og-tag" data-tag="bat" style="left: 32.778%; top: 67.045%">–</span><span class="og-tag" data-tag="wp" style="left: 67.222%; top: 32.955%">–</span><span class="og-tag" data-tag="huis" style="left: 68.889%; top: 50.000%">–</span><span class="og-tag" data-tag="auto" style="left: 67.222%; top: 67.045%">–</span><div class="og-n" style="left: 50%; top: 50%">
+<div class="og-sys-schema"><div class="og-pf"><div class="og-box"><svg viewBox="0 0 900 440" preserveAspectRatio="none" class="og-lines" fill="none" aria-hidden="true"><g data-line="zon"><path d="M173 70 C300 70 300 220 450 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M173 70 C300 70 300 220 450 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="net"><path d="M450 220 L173 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 L173 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="bat"><path d="M450 220 C300 220 300 370 173 370" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 C300 220 300 370 173 370" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="wp"><path d="M450 220 C600 220 600 70 727 70" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 C600 220 600 70 727 70" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="huis"><path d="M450 220 L727 220" stroke="#D3DCE5" stroke-width="4" vector-effect="non-scaling-stroke"></path><path class="og-flow" d="M450 220 L727 220" stroke="#16BE7D" stroke-width="4" stroke-dasharray="10 12" vector-effect="non-scaling-stroke"></path></g><g data-line="auto"><path d="M450 220 C600 220 600 370 727 370" stroke="#A7B4C2" stroke-width="3" stroke-dasharray="3 8" vector-effect="non-scaling-stroke"></path></g></svg><span class="og-tag" data-tag="zon" style="left: 32.778%; top: 32.955%">–</span><span class="og-tag" data-tag="net" style="left: 31.111%; top: 50.000%">–</span><span class="og-tag" data-tag="bat" style="left: 32.778%; top: 67.045%">–</span><span class="og-tag" data-tag="wp" style="left: 67.222%; top: 32.955%">–</span><span class="og-tag" data-tag="huis" style="left: 68.889%; top: 50.000%">–</span><span class="og-tag" data-tag="auto" style="left: 67.222%; top: 67.045%">–</span><div class="og-n" style="left: 50%; top: 50%">
 <button type="button" class="og-hub" data-node="ems" aria-pressed="true" aria-controls="og-panel" aria-label="Slimme regeling">
 <span class="og-hub-in"><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span style="aspect-ratio: 1; background: #FFFFFF"></span><span class="og-dia" style="aspect-ratio: 1; background: #16BE7D"></span></span>
 </button>
 <span class="og-hublabel">Slimme regeling</span>
 </div><div class="og-n" style="left: 12.222%; top: 15.909%">
-<button type="button" class="og-sq" data-node="zon" aria-pressed="false" aria-controls="og-panel" style="border-color: #16BE7D; color: #16BE7D"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="8" y="8" width="8" height="8" transform="rotate(45 12 12)"></rect><path d="M12 1v2M12 21v2M1 12h2M21 12h2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg><span class="og-v" data-val="zon">–</span><span class="og-l">Zon</span></button>
+<button type="button" class="og-sq" data-node="zon" aria-pressed="false" aria-controls="og-panel" style="color: #16BE7D"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="8" y="8" width="8" height="8" transform="rotate(45 12 12)"></rect><path d="M12 1v2M12 21v2M1 12h2M21 12h2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"></path></svg><span class="og-v" data-val="zon">–</span><span class="og-l">Zon</span></button>
 </div><div class="og-n" style="left: 12.222%; top: 50.000%">
-<button type="button" class="og-sq" data-node="net" aria-pressed="false" aria-controls="og-panel" style="border-color: #3D4A5C; color: #3D4A5C"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M8 22L12 2l4 20M9 15h6M10 9h4M4 6h16M4 6v3M20 6v3"></path></svg><span class="og-v" data-val="net">–</span><span class="og-l">Net</span></button>
+<button type="button" class="og-sq" data-node="net" aria-pressed="false" aria-controls="og-panel" style="color: #3D4A5C"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M8 22L12 2l4 20M9 15h6M10 9h4M4 6h16M4 6v3M20 6v3"></path></svg><span class="og-v" data-val="net">–</span><span class="og-l">Net</span></button>
 </div><div class="og-n" style="left: 12.222%; top: 84.091%">
-<button type="button" class="og-sq" data-node="bat" aria-pressed="false" aria-controls="og-panel" style="border-color: #1A6E9E; color: #1A6E9E"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="7" y="4" width="10" height="18"></rect><path d="M10 2h4M10 16h4M10 12h4"></path></svg><span class="og-v" data-val="bat">–</span><span class="og-l">Batterij</span></button>
+<button type="button" class="og-sq" data-node="bat" aria-pressed="false" aria-controls="og-panel" style="color: #1A6E9E"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="7" y="4" width="10" height="18"></rect><path d="M10 2h4M10 16h4M10 12h4"></path></svg><span class="og-v" data-val="bat">–</span><span class="og-l">Batterij</span></button>
 </div><div class="og-n" style="left: 87.778%; top: 15.909%">
-<button type="button" class="og-sq" data-node="wp" aria-pressed="false" aria-controls="og-panel" style="border-color: #151A21; color: #151A21"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="2" y="4" width="20" height="16"></rect><circle cx="10" cy="12" r="5"></circle><path d="M10 7v10M5 12h10M18 8v8"></path></svg><span class="og-v" data-val="wp">–</span><span class="og-l">Warmtepomp</span></button>
+<button type="button" class="og-sq" data-node="wp" aria-pressed="false" aria-controls="og-panel" style="color: #151A21"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><rect x="2" y="4" width="20" height="16"></rect><circle cx="10" cy="12" r="5"></circle><path d="M10 7v10M5 12h10M18 8v8"></path></svg><span class="og-v" data-val="wp">–</span><span class="og-l">Warmtepomp</span></button>
 </div><div class="og-n" style="left: 87.778%; top: 50.000%">
-<button type="button" class="og-sq" data-node="huis" aria-pressed="false" aria-controls="og-panel" style="border-color: #151A21; color: #151A21"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 11L12 3l9 8M5 9v12h14V9M10 21v-6h4v6"></path></svg><span class="og-v" data-val="huis">–</span><span class="og-l">Huis</span></button>
+<button type="button" class="og-sq" data-node="huis" aria-pressed="false" aria-controls="og-panel" style="color: #151A21"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 11L12 3l9 8M5 9v12h14V9M10 21v-6h4v6"></path></svg><span class="og-v" data-val="huis">–</span><span class="og-l">Huis</span></button>
 </div><div class="og-n" style="left: 87.778%; top: 84.091%">
-<button type="button" class="og-sq" data-node="auto" aria-pressed="false" aria-controls="og-panel" style="border-color: #A7B4C2; color: #4A5668"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 17V12l2-5h14l2 5v5H3zM3 12h18"></path><rect x="5" y="17" width="3" height="3"></rect><rect x="16" y="17" width="3" height="3"></rect></svg><span class="og-v" data-val="auto">–</span><span class="og-l">Auto</span></button>
+<button type="button" class="og-sq" data-node="auto" aria-pressed="false" aria-controls="og-panel" style="color: #4A5668"><svg class="og-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 17V12l2-5h14l2 5v5H3zM3 12h18"></path><rect x="5" y="17" width="3" height="3"></rect><rect x="16" y="17" width="3" height="3"></rect></svg><span class="og-v" data-val="auto">–</span><span class="og-l">Auto</span></button>
 </div></div></div></div>
 <aside class="og-sys-panel" id="og-panel" aria-label="Details van het gekozen onderdeel"></aside>
 </section>
@@ -198,26 +109,62 @@
 </div></div>
 </div>
 <p class="og-hint">Dit is een voorbeeldwoning op een half bewolkte dag in oktober. De waarden zijn een simulatie.</p>
+  </div>
+</section>
 
-<div class="og-cta" style="padding: 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
-<div><h2 style="margin: 0; font-size: 28px; font-weight: 800">Zo'n overzicht voor je eigen huis?</h2><p style="margin: 4px 0 0; color: #D0D2D5">We kijken samen wat er al is en wat erbij kan.</p></div>
-<a class="og-btn" href="index.html#contact" style="text-decoration: none; padding: 14px 24px; background: #16BE7D; color: #151A21; font-weight: 700">Plan een adviesgesprek</a>
-<a class="og-btn" href="slimme-meter.html" style="text-decoration: none; padding: 12px 22px; border: 2px solid #FFFFFF; color: #FFFFFF; font-weight: 700">Ik wil direct inzicht</a>
-</div>
+<section class="sectie krap">
+  <div class="wrap">
+    <p class="eyebrow stil">Effectief besparen</p>
+    <h2>De belangrijkste <em>ingrediënten</em></h2>
+    <p class="lead">De bespaarcheck weegt ze alle zes en laat zien wat ze in jouw woning opleveren. De volgorde maakt uit: opwekken zonder zelf gebruiken levert weinig op.</p>
+    <div class="drie-kaarten">
+      <div class="kaart"><span class="nr">01</span><h3>Zonnepanelen</h3><p>Wekken overdag stroom op. Wat je op dat moment niet zelf gebruikt, gaat terug naar het net — voor een fractie van de prijs die je betaalt.</p></div>
+      <div class="kaart"><span class="nr">02</span><h3>Thuisbatterij</h3><p>Bewaart het overschot van overdag, zodat je het 's avonds zelf gebruikt. Zonder batterij is je opbrengst hoog en je eigen gebruik laag.</p></div>
+      <div class="kaart"><span class="nr">03</span><h3>Hybride warmtepomp</h3><p>Verwarmt met stroom in plaats van gas. De helft van je gasverbruik valt weg, maar je stroomverbruik stijgt — het saldo hangt af van wanneer hij draait.</p></div>
+      <div class="kaart"><span class="nr">04</span><h3>Zonnestroom zelf gebruiken</h3><p>De goedkoopste kilowattuur is die je niet koopt. Dit is de eerste winst en hij kost niets, behalve dat je verbruik verschuift naar de uren dat de zon schijnt.</p></div>
+      <div class="kaart"><span class="nr">05</span><h3>Slim regelen</h3><p>Batterij, warmtepomp en auto op de uren dat stroom goedkoop is. Dit is de maatregel die de andere aanstuurt; zonder regeling blijft het een verzameling apparaten.</p></div>
+      <div class="kaart"><span class="nr">06</span><h3>Inzicht in je verbruik</h3><p>Zonder meting weet je niet waar je geld weggaat. Sluipverbruik is de stilste post op de rekening, en vaak de makkelijkste om aan te pakken.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sectie lichtvlak">
+  <div class="wrap">
+    <div class="over" style="align-items:start">
+      <div>
+        <p class="eyebrow stil">Waarom nu</p>
+        <h2>Energie is <em>duur</em></h2>
+        <p class="lead">Het loont om via een dynamisch contract per uur af te rekenen. Op het ene moment betaal je het volle tarief, op het andere bijna niets.</p>
+      </div>
+      <div class="kantel">
+        <p><b>Zonder regeling kun je daar niets mee.</b> Een dynamisch contract geeft je de uurprijs, maar niet de mogelijkheid om erop te reageren: je verbruik volgt je dagritme, niet de markt. Slimme regeling sluit die kloof. Ze leest de prijzen van het komende etmaal en bepaalt wanneer de batterij laadt, de warmtepomp verwarmt en de auto oplaadt — steeds op de uren dat stroom goedkoop is. Zonder die aansturing betaal je op de dure uren het volle tarief en laat je de goedkope uren liggen. Bijna alle apparaten kunnen via een app of het internet aangestuurd worden, en met de komst van AI wordt de besturing ervan een fluitje van een cent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sectie">
+  <div class="wrap">
+    <p class="eyebrow stil">Wat het oplevert</p>
+    <h2>Zo'n overzicht voor <em>je eigen huis?</em></h2>
+    <p class="lead">Begin met meten. Dertig dagen later weet je waar je staat, en welke maatregel voor jou het meeste oplevert.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+      <a class="knop" href="slimme-meter.html">Ik wil direct inzicht</a>
+      <a class="knop stil" href="bespaarcheck.html">Doe eerst de gratis check</a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer style="background: #151A21; color: #D0D2D5">
-<div style="max-width: 1240px; margin: 0 auto; padding: 36px var(--gutter); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px">
-<img src="assets/images/logo-donker.png" alt="Offgrid energiesystemen" style="height: 60px; width: auto">
-<div style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 16px">
-<span>KvK 42194069</span>
-<a href="privacyverklaring.html" style="color: #FFFFFF">Privacyverklaring</a>
-<a href="algemene-voorwaarden.html" style="color: #FFFFFF">Algemene voorwaarden</a>
-</div>
-</div>
+<footer class="voet">
+  <div class="wrap">
+    <a href="index.html"><img src="assets/images/logo-donker.png" alt="Offgrid energiesystemen"></a>
+    <span>Offgrid energiesystemen</span>
+    <span><a href="systeem.html">Zo werkt het</a></span>
+    <span style="margin-left:auto"><a href="algemene-voorwaarden.html">Algemene voorwaarden</a> · <a href="privacyverklaring.html">Privacy</a> · KvK 42194069 · © 2026</span>
+  </div>
 </footer>
-</div>
-
-<script src="assets/js/systeem.js?v=20261023" defer></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/systeem.js"></script>
 </body>
 </html>
