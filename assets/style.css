@@ -578,3 +578,16 @@ html{scroll-padding-top:112px}
 
 /* melding als het bestellen niet lukt */
 .bestelfout{margin:16px 0 0;padding:12px 14px;border-left:3px solid #b3352a;background:#fdf4f3;color:#8d2a21;font-size:14px;line-height:1.5}
+
+/* de rij onder de tegels volgt hetzelfde vierkolomsraster als de tegels,
+   zodat de rand van de grote kaart samenvalt met de rand tussen tegel 2 en 3 */
+.og-rij{display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px}
+.og-rij-a{grid-column: 1 / 4; min-width: 0; display: flex; flex-direction: column}
+.og-rij-b{grid-column: 4 / 5; min-width: 0; display: flex; flex-direction: column}
+@media (max-width: 900px){
+  .og-rij{grid-template-columns: 1fr}
+  .og-rij-a, .og-rij-b{grid-column: 1 / -1}
+}
+
+/* het laatste kengetal in het groen, net als de accenten elders */
+.og-tile:last-child .og-tv{color: var(--groen)}
