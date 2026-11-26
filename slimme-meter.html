@@ -24,7 +24,7 @@
 <meta name="twitter:image" content="https://www.offgridenergiesystemen.nl/assets/images/og-image.jpg">
 <meta name="theme-color" content="#151A21">
 <link rel="canonical" href="https://www.offgridenergiesystemen.nl/slimme-meter.html">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co https://api.pdok.nl; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co https://api.pdok.nl https://offgrid-vm.tailba5fd4.ts.net; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -56,7 +56,7 @@
  ]
 }
 </script>
-<link rel="stylesheet" href="assets/style.css?v=20261223">
+<link rel="stylesheet" href="assets/style.css?v=20261214">
 </head>
 <body>
 
@@ -81,7 +81,7 @@
 <section class="sectie lichtvlak">
   <div class="wrap">
     <p class="eyebrow stil">Je dag in stroom</p>
-    <h2>Vandaag <em>10,0 kWh</em> verbruikt</h2>
+    <h2>Vandaag heb je <em>85%</em> van je eigen energie verbruikt</h2>
     <p class="lead">Je ziet wanneer je stroom over hebt en deze het beste op kan slaan, zodat je dit later weer kunt gebruiken. Het doel zo zelfvoorzienend als mogelijk. Daarmee ben je minder afhankelijk van dure energie en het net.</p>
     <div class="twee">
       <div class="kaart">
@@ -222,18 +222,26 @@
 
     <div class="bestel-gegevens" id="gegevens">
       <p class="lead">Deze gegevens gebruiken we om de meter te bezorgen en het rapport te sturen. Je betaalt eenmalig &euro; 45,00. Wil je liever eerst een gesprek? Dat gaat via <a href="contact.html" style="color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)">het contactformulier</a>, niet via dit formulier.</p>
-      <form class="formulier" action="bedankt.html" method="get">
+      <form class="formulier" id="bestelform">
         <div><label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" required></div>
         <div><label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+        <div><label for="tel">Telefoon</label><input id="tel" name="telefoon" type="tel" autocomplete="tel"></div>
         <div><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required></div>
-        <div><label for="woonplaats">Woonplaats</label><input id="woonplaats" name="woonplaats" type="text" autocomplete="address-level2" required></div>
+        <div><label for="woonplaats">Woonplaats</label><input id="woonplaats" name="plaats" type="text" autocomplete="address-level2" required></div>
         <div><label for="adres">Adres</label><input id="adres" name="adres" type="text" autocomplete="street-address" required></div>
         <p class="veld-hint vol" id="postcode-hint">Vul je postcode in, dan zoeken we de woonplaats erbij.</p>
         <div class="vol"><label for="opmerking">Iets dat we moeten weten? (optioneel)</label><textarea id="opmerking" name="opmerking"></textarea></div>
-        <div class="vol"><button class="knop" type="submit">Bestel de meter en ontvang het rapport</button></div>
+        <div class="vol akkoordveld">
+          <label class="vink">
+            <input id="akkoord" name="akkoord" type="checkbox" required>
+            <span>Ik ga akkoord met de <a href="algemene-voorwaarden.html">algemene voorwaarden</a> en de <a href="privacyverklaring.html">privacyverklaring</a>.</span>
+          </label>
+        </div>
+        <p class="bestelfout vol" id="bestelfout" role="alert" hidden></p>
+        <div class="vol"><button class="knop" type="submit" id="bestelknop">Bestel de meter en ontvang het rapport</button></div>
       </form>
-      <p class="klein">Let op: dit is een voorstel. De koppeling met de betaalprovider moet nog worden aangesloten voordat dit formulier echt bestellingen aanneemt.</p>
+      <p class="klein">Je wordt na het versturen doorgestuurd naar de betaalpagina. Daar rond je de betaling van &euro; 45,00 af; pas daarna gaat de bestelling naar ons door.</p>
+
     </div>
       </div>
       <div class="doos">
@@ -313,6 +321,7 @@
 </footer>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/postcode.js?v=20261208"></script>
+<script src="assets/js/slimme-meter.js?v=20261214"></script>
 <script src="assets/js/grafiek.js"></script>
 </body>
 </html>

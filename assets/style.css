@@ -95,7 +95,7 @@ p{margin:0 0 14px}
 .breed .glooiing{position:absolute;left:0;right:0;bottom:0;height:260px;z-index:0;pointer-events:none}
 .breed .glooiing svg{width:100%;height:100%;display:block}
 .breed .wrap{position:relative;z-index:1}
-.breed .accent{background:none;border-radius:0;padding:84px 0}
+.breed .accent{background:none;border-radius:0;padding:0 0 84px}
 .accent h2{font-size:clamp(28px,3.4vw,44px);margin:0;max-width:24ch;color:#fff}
 .accent .lead{margin:14px 0 0;max-width:44ch;color:#B6C2CE}
 .accent .rechts{margin-left:auto;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
@@ -198,7 +198,7 @@ p{margin:0 0 14px}
   .twee,.drie-kaarten{grid-template-columns:1fr}
   .stap{grid-template-columns:40px 1fr;gap:14px}
   .accent{padding:34px}
-  .breed .accent{padding:64px 0 110px}
+  .breed .accent{padding:0 0 110px}
   .breed .glooiing{height:200px}
   .breed .glooiing svg path:first-of-type{display:none}
   .accent .rechts{margin-left:0}
@@ -570,15 +570,11 @@ html{scroll-padding-top:112px}
 /* toelichting onder een knop in de tekstkolom */
 .knop-noot{font-size:13.5px;color:var(--muted);margin:12px 0 0;line-height:1.5;max-width:46ch}
 
-/* de rij onder de tegels volgt hetzelfde vierkolomsraster als de tegels,
-   zodat de rand van de grote kaart samenvalt met de rand tussen tegel 2 en 3 */
-.og-rij{display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px}
-.og-rij-a{grid-column: 1 / 4; min-width: 0; display: flex; flex-direction: column}
-.og-rij-b{grid-column: 4 / 5; min-width: 0; display: flex; flex-direction: column}
-@media (max-width: 900px){
-  .og-rij{grid-template-columns: 1fr}
-  .og-rij-a, .og-rij-b{grid-column: 1 / -1}
-}
+/* akkoord met de voorwaarden, bij het bestelformulier */
+.akkoordveld{margin-top:2px}
+.vink{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--tekst);line-height:1.55;cursor:pointer}
+.vink input{margin:3px 0 0;flex:0 0 auto;width:16px;height:16px;accent-color:var(--groen);cursor:pointer}
+.vink a{color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)}
 
-/* het laatste kengetal in het groen, net als de accenten elders */
-.og-tile:last-child .og-tv{color: var(--groen)}
+/* melding als het bestellen niet lukt */
+.bestelfout{margin:16px 0 0;padding:12px 14px;border-left:3px solid #b3352a;background:#fdf4f3;color:#8d2a21;font-size:14px;line-height:1.5}
