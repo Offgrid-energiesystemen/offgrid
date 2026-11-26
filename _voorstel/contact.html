@@ -24,14 +24,14 @@
 <meta name="theme-color" content="#151A21">
 <link rel="canonical" href="https://www.offgridenergiesystemen.nl/contact.html">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
-<link rel="stylesheet" href="assets/style.css?v=1795698497">
+<link rel="stylesheet" href="assets/style.css?v=20261127">
 </head>
 <body>
 
 <header class="hdr">
   <div class="wrap">
     <a href="index.html"><img src="../assets/images/logo-donker.png" alt="Offgrid energiesystemen"></a>
-    <nav><a href="bespaarcheck.html">Bespaarcheck</a><a href="index.html#diensten">Diensten</a><a href="systeem.html">Zo werkt het</a><a href="index.html#aanpak">Aanpak</a><a href="index.html#over-ons">Over ons</a><a href="index.html#vragen">Vragen</a></nav>
+    <nav><a href="bespaarcheck.html">Bespaarcheck</a><a href="index.html#diensten">Diensten</a><a href="systeem.html">Zo werkt het</a><a href="index.html#aanpak">Aanpak</a><a href="index.html#over-ons">Over ons</a><a href="index.html#vragen">Vragen</a><a href="contact.html">Contact</a></nav>
     <a class="knop" href="slimme-meter.html">Ik wil direct inzicht</a>
   </div>
 </header>
@@ -52,7 +52,7 @@
       <div>
         <p class="eyebrow stil">Wat je kunt verwachten</p>
         <h2>Een gesprek, <em>geen verkoop</em></h2>
-        <ul class="vinkjes" style="grid-template-columns:1fr">
+        <ul class="vinkjes" style="columns:1">
           <li>We kijken naar je verbruik en je huidige installaties</li>
           <li>Je hoort welke stappen het meeste opleveren, en in welke volgorde</li>
           <li>Je krijgt geen offerte mee die je moet tekenen</li>
@@ -60,13 +60,54 @@
         </ul>
       </div>
       <div>
-        <form class="formulier" style="margin-top:0" action="bedankt.html" method="get">
-          <div><label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" required></div>
-          <div><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel" required></div>
-          <div class="vol"><label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-          <div class="vol"><label for="bericht">Waar wil je het over hebben?</label><textarea id="bericht" name="bericht"></textarea></div>
-          <div class="vol"><button class="knop" type="submit">Verstuur aanvraag</button></div>
+        <form class="contactform cform" action="https://formsubmit.co/info@offgridenergiesystemen.nl" method="POST">
+          <input type="hidden" name="_subject" value="Aanvraag adviesgesprek via offgridenergiesystemen.nl">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.offgridenergiesystemen.nl/contact.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honing">
+          <div>
+            <label for="p-naam">Naam <span class="verplicht">*</span></label>
+            <input id="p-naam" name="naam" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="p-email">E-mailadres <span class="verplicht">*</span></label>
+            <input id="p-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="p-tel">Telefoonnummer</label>
+            <input id="p-tel" name="telefoon" type="tel" autocomplete="tel">
+          </div>
+          <div>
+            <label for="p-postcode">Postcode</label>
+            <input id="p-postcode" name="postcode" type="text" autocomplete="postal-code">
+          </div>
+          <div class="vol">
+            <label for="p-interesse">Waar ben je in geïnteresseerd?</label>
+            <select id="p-interesse" name="interesse">
+              <option>Een complete slimme energie-installatie</option>
+              <option>Een thuisbatterij</option>
+              <option>Domotica</option>
+              <option>Ik weet het nog niet, ik wil advies</option>
+            </select>
+          </div>
+          <div class="vol">
+            <label for="p-bericht">Waar wil je het over hebben?</label>
+            <textarea id="p-bericht" name="bericht" rows="4"></textarea>
+          </div>
+          <div class="vol">
+            <button class="knop" type="submit">Verstuur aanvraag</button>
+          </div>
+          <p class="cform-klein vol">Velden met <span class="verplicht">*</span> zijn verplicht. We gebruiken je gegevens alleen om contact met je op te nemen over je aanvraag.</p>
+          <p class="cstatus vol" role="status" aria-live="polite" hidden></p>
         </form>
+        <div class="cdone" tabindex="-1" hidden>
+          <svg width="52" height="52" viewBox="0 0 56 56" aria-hidden="true"><rect x="10" y="10" width="36" height="36" transform="rotate(45 28 28)" fill="#16BE7D"></rect><path d="M19 28.5l6 6 12-13" fill="none" stroke="#151A21" stroke-width="4" stroke-linecap="square"></path></svg>
+          <h3>Bedankt<span class="cdone-naam"></span>, je aanvraag is verstuurd</h3>
+          <p class="cdone-mail"></p>
+          <p>We nemen zo snel mogelijk contact met je op om een moment af te spreken.</p>
+          <button class="knop stil cdone-opnieuw" type="button">Nog een aanvraag</button>
+        </div>
       </div>
     </div>
   </div>
@@ -94,5 +135,6 @@
   </div>
 </footer>
 <script src="../assets/js/main.js"></script>
+<script src="assets/js/contact.js?v=20261126" defer></script>
 </body>
 </html>

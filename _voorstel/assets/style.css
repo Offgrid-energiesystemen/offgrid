@@ -437,3 +437,65 @@ main p,main li,main a{overflow-wrap:break-word}
 /* draaiende molenbladen in de hero */
 .og-spin{transform-box:view-box;animation:og-spin 9s linear infinite}
 @media (prefers-reduced-motion: reduce){.og-spin{animation:none}}
+
+/* ---------- Contactformulier ---------- */
+.contact-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;margin-top:44px;align-items:start}
+.cinfo dl{display:grid;grid-template-columns:auto 1fr;gap:14px 26px;margin:0;font-size:15.5px}
+.cinfo dt{color:#8FA0B0;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding-top:4px}
+.cinfo dd{margin:0;color:#fff}
+.cinfo dd a{color:#fff;border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:1px}
+.cinfo dd a:hover{border-color:var(--groen)}
+.cinfo p{font-size:14.5px;color:#A8B6C4;line-height:1.65;margin:28px 0 0;max-width:38ch}
+
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px;margin:0}
+.cform .vol{grid-column:1/-1}
+.cform label{display:block;font-size:13px;font-weight:600;letter-spacing:.02em;margin-bottom:7px;color:#C6D2DD}
+.cform label .verplicht{color:var(--groen)}
+.cform input,.cform textarea,.cform select{width:100%;font:inherit;font-size:15.5px;padding:13px 14px;
+  border:1px solid rgba(255,255,255,.2);border-radius:2px;background:rgba(255,255,255,.06);color:#fff;min-height:48px}
+.cform input::placeholder,.cform textarea::placeholder{color:#7C8A98}
+.cform input:focus,.cform textarea:focus,.cform select:focus{border-color:var(--groen);
+  outline:2px solid rgba(22,190,125,.25);outline-offset:0}
+.cform textarea{min-height:120px;resize:vertical}
+.cform select{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23A8B6C4' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.cform select option{background:#151A21;color:#fff}
+.cform .knop{width:auto;margin-top:6px;cursor:pointer;border:0;font-family:inherit}
+.cform .knop[disabled]{opacity:.55;cursor:default}
+.cform-klein{font-size:13px;color:#8C9AA8;margin:16px 0 0;line-height:1.6;max-width:54ch}
+.cform-klein a{color:#A8B6C4;border-bottom:1px solid rgba(255,255,255,.25)}
+.cform-klein a:hover{color:#fff}
+.cstatus{margin:16px 0 0;padding:12px 14px;font-size:14px;line-height:1.55;
+  border-left:4px solid var(--groen);background:rgba(22,190,125,.12);color:#DFF7EC}
+.cstatus[data-fout="1"]{border-left-color:#C0392B;background:rgba(192,57,43,.16);color:#F6DEDE}
+.cdone{text-align:left}
+.cdone svg{display:block;margin-bottom:20px}
+.cdone h3{font-size:26px;font-weight:500;margin:0 0 12px;color:#fff}
+.cdone p{font-size:15.5px;line-height:1.65;color:#A8B6C4;margin:0 0 8px;max-width:52ch}
+.cdone .knop{margin-top:22px}
+
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .cform{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .contact{padding:56px 0}
+  .cinfo dl{grid-template-columns:1fr;gap:4px 0}
+  .cinfo dt{padding-top:14px}
+}
+.cform .honing,.honing{position:absolute!important;left:-9999px!important;top:0!important;width:1px!important;height:1px!important;min-height:0!important;padding:0!important;border:0!important;opacity:0!important;pointer-events:none!important}
+/* ---------- Contactformulier op een licht vlak ---------- */
+.sectie .cform label{color:var(--tekst)}
+.sectie .cform input,.sectie .cform textarea,.sectie .cform select{
+  border:1px solid var(--rand);background:var(--wit);color:var(--donker)}
+.sectie .cform input:focus,.sectie .cform textarea:focus,.sectie .cform select:focus{
+  border-color:var(--groen);outline:2px solid rgba(22,190,125,.25)}
+.sectie .cform select option{background:#fff;color:var(--donker)}
+.sectie .cform-klein{color:var(--muted)}
+.sectie .cform-klein a{color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)}
+.sectie .cstatus{background:#E3F6EE;color:#0E6B47;border-left-color:var(--groen)}
+.sectie .cstatus[data-fout="1"]{background:#FBE9E9;color:#8A1F1F;border-left-color:#C0392B}
+.sectie .cdone h3{color:var(--donker)}
+.sectie .cdone p{color:var(--tekst)}
+.sectie .cdone .knop.stil{color:var(--blauw);border-color:rgba(26,110,158,.4)}
