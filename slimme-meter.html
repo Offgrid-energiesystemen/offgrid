@@ -195,18 +195,17 @@
 
 <section class="sectie lichtvlak">
   <div class="wrap">
-    <p class="eyebrow stil">Zo werkt het</p>
-    <h2>Vier stappen, <em>dertig dagen</em></h2>
-    <div class="stappen">
-      <div class="stap"><span class="n">01</span><h3>Je bestelt de meter</h3><p>Je vult je gegevens in en betaalt eenmalig € 45,00. De meter past op elke Nederlandse slimme meter.</p></div>
-      <div class="stap"><span class="n">02</span><h3>Je ziet meteen je verbruik</h3><p>Je plugt hem in en ziet direct wat je op dat moment gebruikt. Geen installateur nodig.</p></div>
-      <div class="stap"><span class="n">03</span><h3>Soms hebben we meer nodig</h3><p>Bij een afwijkend verbruik of een onduidelijke situatie nemen we contact op, of nodigen we je uit voor een schouw. Wil je die zelf aanvragen, dan kan dat via <a href="#afspraak" style="color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)">een afspraak</a>.</p></div>
-      <div class="stap"><span class="n">04</span><h3>Je rapport in je mailbox</h3><p>Na dertig dagen ontvang je een rapport met de meest effectieve maatregelen, en wat ze opleveren.</p></div>
+    <p class="eyebrow stil">Vragen over dit product</p>
+    <h2>Wat mensen <em>willen weten</em></h2>
+    <div class="faq">
+      <details><summary>Moet er een installateur langskomen?</summary><p>Nee. Je plugt de meter zelf in de P1-poort van je slimme meter. Dat duurt een minuut.</p></details>
+      <details><summary>Werkt hij op elke slimme meter?</summary><p>Op vrijwel elke Nederlandse slimme meter zit een P1-poort. Wijkt je meter af, dan hoor je dat voordat je bestelt.</p></details>
+      <details><summary>Wat gebeurt er met mijn gegevens?</summary><p>Die gebruiken we voor het rapport en de levering. Je gegevens staan niet op de website en worden niet gedeeld met derden.</p></details>
+      <details><summary>En als ik daarna een batterij wil?</summary><p>Dan heb je de cijfers al in huis. In een adviesgesprek rekenen we uit wat een batterij voor jouw verbruik oplevert.</p></details>
     </div>
   </div>
 </section>
-
-<section class="sectie lichtvlak" id="bestellen">
+<section class="sectie afspraak" id="afspraak">
   <div class="wrap">
     <div class="bestel">
       <div>
@@ -230,26 +229,27 @@
           <li>Rapport binnen enkele dagen na de meetperiode</li>
           <li>Kosteloos en vrijblijvend adviesrapport</li>
         </ul>
-        <a class="knop" href="#gegevens" style="width:100%;justify-content:center">Bestel de meter en ontvang het rapport</a>
+        <a class="knop" href="#bestellen" style="width:100%;justify-content:center">Bestel de meter en ontvang het rapport</a>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="bestel-gegevens" id="gegevens">
-      <h3>Je gegevens voor de <em>levering</em></h3>
-      <p class="lead">Deze gegevens gebruiken we om de meter te bezorgen en het rapport te sturen. Je betaalt eenmalig &euro; 45,00. Wil je liever eerst een gesprek? Dat gaat via <a href="contact.html" style="color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)">het contactformulier</a>, niet via dit formulier.</p>
-      <form class="formulier" action="bedankt.html" method="get">
-        <div><label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" required></div>
-        <div><label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-        <div><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
-        <div><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required></div>
-        <div><label for="woonplaats">Woonplaats</label><input id="woonplaats" name="woonplaats" type="text" autocomplete="address-level2" required></div>
-        <div><label for="adres">Adres</label><input id="adres" name="adres" type="text" autocomplete="street-address" required></div>
-        <p class="veld-hint vol" id="postcode-hint">Vul je postcode in, dan zoeken we de woonplaats erbij.</p>
-        <div class="vol"><label for="opmerking">Iets dat we moeten weten? (optioneel)</label><textarea id="opmerking" name="opmerking"></textarea></div>
-        <div class="vol"><button class="knop" type="submit">Bestel de meter en ontvang het rapport &middot; &euro; 45,00</button></div>
-      </form>
-      <p class="klein">Let op: dit is een voorstel. De koppeling met de betaalprovider moet nog worden aangesloten voordat dit formulier echt bestellingen aanneemt.</p>
-    </div>
+<section class="sectie" id="bestellen">
+  <div class="wrap">
+    <p class="eyebrow stil">Optie 1 · Meter bestellen</p>
+    <h2>Je gegevens voor de <em>levering</em></h2>
+    <p class="lead">Deze gegevens gebruiken we om de meter te bezorgen en het rapport te sturen. Je betaalt eenmalig &euro; 45,00. Wil je liever eerst een gesprek? Dat gaat via <a href="contact.html" style="color:var(--blauw);border-bottom:1px solid rgba(26,110,158,.35)">het contactformulier</a>, niet via dit formulier.</p>
+    <form class="formulier" action="bedankt.html" method="get">
+      <div><label for="naam">Naam</label><input id="naam" name="naam" type="text" autocomplete="name" required></div>
+      <div><label for="email">E-mailadres</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="tel">Telefoon</label><input id="tel" name="tel" type="tel" autocomplete="tel"></div>
+      <div><label for="postcode">Postcode</label><input id="postcode" name="postcode" type="text" autocomplete="postal-code" required></div>
+      <div class="vol"><label for="adres">Adres</label><input id="adres" name="adres" type="text" autocomplete="street-address" required></div>
+      <div class="vol"><label for="opmerking">Iets dat we moeten weten? (optioneel)</label><textarea id="opmerking" name="opmerking"></textarea></div>
+      <div class="vol"><button class="knop" type="submit">Bestel de meter en ontvang het rapport &middot; &euro; 45,00</button></div>
+    </form>
+    <p style="font-size:13.5px;color:var(--muted);margin-top:16px;max-width:60ch">Let op: dit is een voorstel. De koppeling met de betaalprovider moet nog worden aangesloten voordat dit formulier echt bestellingen aanneemt.</p>
   </div>
 </section>
 
