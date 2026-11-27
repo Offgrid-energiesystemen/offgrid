@@ -108,10 +108,12 @@ p{margin:0 0 14px}
 .drie-kaarten.compact{gap:16px;margin-top:32px}
 .drie-kaarten.compact .kaart{padding:22px 24px}
 .drie-kaarten.compact .nr{margin-bottom:8px}
-.drie-kaarten.compact .kaart-kop{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
-.drie-kaarten.compact .kaart-kop .nr{margin-bottom:0}
-.drie-kaarten.compact .ic-klein{display:flex;color:var(--groen)}
-.drie-kaarten.compact .ic-klein svg{width:26px;height:26px;display:block}
+.drie-kaarten .kaart-kop{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.drie-kaarten .kaart-kop .nr{margin-bottom:0}
+.drie-kaarten .ic-klein{display:flex;color:var(--groen)}
+.drie-kaarten .ic-klein svg{width:28px;height:28px;display:block}
+.drie-kaarten.compact .kaart-kop{margin-bottom:8px}
+.drie-kaarten.compact .ic-klein svg{width:26px;height:26px}
 .drie-kaarten.compact h3{font-size:16.5px;margin:0 0 6px}
 .drie-kaarten.compact p{font-size:14.5px;line-height:1.5;color:var(--muted)}
 .vier-kaarten{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
