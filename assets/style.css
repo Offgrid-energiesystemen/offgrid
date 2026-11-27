@@ -28,7 +28,7 @@ p{margin:0 0 14px}
 .donker .knop.stil,.accent .knop.stil,.contact .knop.stil,.uitslag .knop.stil{color:#fff;border-color:rgba(255,255,255,.35)}
 .accent .knop.stil:hover,.uitslag .knop.stil:hover{background:rgba(255,255,255,.08)}
 .tekstlink{font-size:14.5px;color:inherit;border-bottom:1px solid rgba(0,0,0,.3);padding-bottom:3px}
-.donker .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
+.donker .tekstlink,.contact .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
 
 .hdr{background:var(--donker);border-bottom:1px solid rgba(255,255,255,.10);
   position:sticky;top:0;z-index:100;
@@ -105,7 +105,7 @@ p{margin:0 0 14px}
 .drie-kaarten .ic{height:88px}
 .drie-kaarten .ic svg{max-width:200px;max-height:88px;height:auto;width:auto}
 .drie-kaarten h3{font-size:18px;line-height:1.35}
-.drie-kaarten.compact{gap:16px;margin-top:32px}
+.drie-kaarten.compact{gap:16px;margin-top:32px;grid-auto-rows:1fr}
 .drie-kaarten.compact .kaart{padding:22px 24px}
 .drie-kaarten.compact .nr{margin-bottom:8px}
 .drie-kaarten .kaart-kop{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
@@ -500,7 +500,7 @@ main p,main li,main a{overflow-wrap:break-word}
 @media (prefers-reduced-motion: reduce){.og-spin{animation:none}}
 
 /* ---------- Contactformulier ---------- */
-.contact-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;margin-top:44px;align-items:start}
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:88px;align-items:start}
 .cinfo dl{display:grid;grid-template-columns:auto 1fr;gap:14px 26px;margin:0;font-size:15.5px}
 .cinfo dt{color:#8FA0B0;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;padding-top:4px}
 .cinfo dd{margin:0;color:#fff}
@@ -568,15 +568,15 @@ html{scroll-padding-top:112px}
 @media (max-width:900px){html{scroll-padding-top:88px}}
 
 /* ---------- Verwijzing naar de contactpagina, in de donkere contactband ---------- */
-.contact-cta{border:1px solid rgba(255,255,255,.15);background:var(--donker2);padding:38px 40px}
+.contact-cta{margin-top:-32px;border:1px solid rgba(255,255,255,.15);background:var(--donker2);padding:32px 36px}
 .contact-cta .lbl{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--groen);margin:0 0 14px}
-.contact-cta h3{font-size:26px;font-weight:500;margin:0 0 20px;color:#fff;letter-spacing:-.01em}
-.contact-cta ul{list-style:none;margin:0 0 30px;padding:0;display:flex;flex-direction:column;gap:12px}
-.contact-cta li{font-size:15.5px;line-height:1.6;padding-left:26px;position:relative;color:rgba(255,255,255,.86)}
-.contact-cta li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;background:var(--groen);transform:rotate(45deg)}
+.contact-cta h3{font-size:20px;font-weight:500;margin:0 0 16px;color:#fff;letter-spacing:-.01em;line-height:1.35}
+.contact-cta ul{list-style:none;margin:0 0 24px;padding:0;display:flex;flex-direction:column;gap:10px}
+.contact-cta li{font-size:15px;line-height:1.55;padding-left:24px;position:relative;color:rgba(255,255,255,.86)}
+.contact-cta li::before{content:"";position:absolute;left:0;top:7px;width:8px;height:8px;background:var(--groen);transform:rotate(45deg)}
 .contact-cta .knop{width:100%;justify-content:center}
-.contact-cta .klein{font-size:13.5px;color:rgba(255,255,255,.55);margin:16px 0 0;text-align:center;line-height:1.6}
-@media (max-width:900px){.contact-cta{padding:30px 26px}}
+.contact-cta .klein{font-size:13px;color:rgba(255,255,255,.55);margin:14px 0 0;text-align:center;line-height:1.6}
+@media (max-width:900px){.contact-cta{margin-top:0;padding:28px 24px}}
 
 /* prijsregel in een kaart, naast de bestaande prijsblokken */
 .kaart-prijs{font-size:34px;font-weight:400;letter-spacing:-.02em;color:var(--donker);margin:0 0 16px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
