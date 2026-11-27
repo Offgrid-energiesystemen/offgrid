@@ -69,6 +69,7 @@ p{margin:0 0 14px}
 .hero h1{font-size:clamp(42px,5.9vw,84px);font-weight:400;line-height:1.04;letter-spacing:-.028em;margin:0 0 28px;color:#fff;max-width:16ch}
 .hero h1 em{font-style:normal;color:var(--groen)}
 .hero .lead{font-size:19px;max-width:48ch;margin-bottom:36px;color:#B6C2CE}
+.hero .klein{font-size:13.5px;color:#8FA0B0;margin-top:14px;max-width:48ch;line-height:1.55}
 .acties{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 /* het watermerk: het eigen diensten-icoon, groot en nauwelijks zichtbaar */
 
