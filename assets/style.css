@@ -28,7 +28,7 @@ p{margin:0 0 14px}
 .donker .knop.stil,.accent .knop.stil,.contact .knop.stil,.uitslag .knop.stil{color:#fff;border-color:rgba(255,255,255,.35)}
 .accent .knop.stil:hover,.uitslag .knop.stil:hover{background:rgba(255,255,255,.08)}
 .tekstlink{font-size:14.5px;color:inherit;border-bottom:1px solid rgba(0,0,0,.3);padding-bottom:3px}
-.donker .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
+.donker .tekstlink,.contact .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
 
 .hdr{background:var(--donker);border-bottom:1px solid rgba(255,255,255,.10);
   position:sticky;top:0;z-index:100;
