@@ -219,6 +219,9 @@ p{margin:0 0 14px}
 .kantel{margin-top:36px;padding:28px 32px;background:var(--licht);border-left:3px solid var(--groen)}
 .kantel p{font-size:16.5px;line-height:1.65;margin:0;color:var(--donker);max-width:80ch}
 .kantel b{font-weight:600}
+.nadruk{margin-top:32px;padding:24px 28px;background:var(--wit);border-left:3px solid var(--groen)}
+.nadruk p{margin:0;font-size:17px;line-height:1.6;color:var(--tekst);max-width:80ch}
+.nadruk b{color:var(--donker)}
 
 /* prijs in de bespaarcheck */
 .prijs{display:flex;align-items:baseline;gap:12px;margin:26px 0 0}
