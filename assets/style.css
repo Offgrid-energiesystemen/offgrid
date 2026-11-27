@@ -112,6 +112,8 @@ p{margin:0 0 14px}
 .drie-kaarten .kaart-kop .nr{margin-bottom:0}
 .drie-kaarten .ic-klein{display:flex;color:var(--groen)}
 .drie-kaarten .ic-klein svg{width:28px;height:28px;display:block}
+.kaart-ic{display:flex;color:var(--groen);margin-bottom:14px}
+.kaart-ic svg{width:28px;height:28px;display:block}
 .drie-kaarten.compact .kaart-kop{margin-bottom:8px}
 .drie-kaarten.compact .ic-klein svg{width:26px;height:26px}
 .drie-kaarten.compact h3{font-size:16.5px;margin:0 0 6px}
