@@ -110,6 +110,11 @@ p{margin:0 0 14px}
 .drie-kaarten.compact .nr{margin-bottom:8px}
 .drie-kaarten.compact h3{font-size:16.5px;margin:0 0 6px}
 .drie-kaarten.compact p{font-size:14.5px;line-height:1.5;color:var(--muted)}
+.vier-kaarten{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:40px}
+.vier-kaarten .kaart{padding:28px}
+.vier-kaarten .ic{height:88px}
+.vier-kaarten .ic svg{max-width:200px;max-height:88px;height:auto;width:auto}
+.vier-kaarten h3{font-size:18px;line-height:1.35}
 
 .stappen{margin-top:44px;border-top:1px solid var(--rand)}
 .stap{display:grid;grid-template-columns:64px 1fr;column-gap:24px;row-gap:0;padding:28px 0;border-bottom:1px solid var(--rand);align-items:start}
@@ -230,7 +235,7 @@ p{margin:0 0 14px}
   .drie > div,.zek > div,.ontw > div{border-right:0;border-bottom:1px solid rgba(255,255,255,.12);padding:24px 0}
   .drie > div:last-child,.zek > div:last-child,.ontw > div:last-child{border-bottom:0;padding-bottom:0}
   .ontw > div{border-bottom-color:var(--rand)}
-  .twee,.drie-kaarten{grid-template-columns:1fr}
+  .twee,.drie-kaarten,.vier-kaarten{grid-template-columns:1fr}
   .stap{grid-template-columns:40px 1fr;gap:14px}
   .accent{padding:34px}
   .breed .accent{padding:0 0 110px}
