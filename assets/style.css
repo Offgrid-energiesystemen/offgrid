@@ -45,7 +45,14 @@ p{margin:0 0 14px}
   width:calc(var(--logoh) * 4.7716);transition:width .38s cubic-bezier(.2,.7,.3,1)}
 .hdr .logo img{position:absolute;top:0;left:0;height:var(--logoh);width:auto;max-width:none;
   display:block;transition:opacity .28s ease}
-.hdr .logo .icoon{opacity:0}
+/* Het icoon moet niet de hoogte van het logo krijgen maar de maat van het raster zoals het
+   in het volledige logo staat: 212x213 binnen 1107x232, op 10,9 vanaf de linkerbovenhoek.
+   Op de volle --logoh was het 3,4px breder en 3,3px hoger -- net zichtbaar naast elkaar. */
+.hdr .logo .icoon{opacity:0;
+  width:calc(var(--logoh) * .913793);
+  height:calc(var(--logoh) * .918103);
+  left:calc(var(--logoh) * .043103);
+  top:calc(var(--logoh) * .038793)}
 .hdr.is-klein .logo{width:calc(var(--logoh) * 1.02)}
 .hdr.is-klein .logo .vol{opacity:0}
 .hdr.is-klein .logo .icoon{opacity:1}
