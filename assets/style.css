@@ -105,6 +105,11 @@ p{margin:0 0 14px}
 .drie-kaarten .ic{height:88px}
 .drie-kaarten .ic svg{max-width:200px;max-height:88px;height:auto;width:auto}
 .drie-kaarten h3{font-size:18px;line-height:1.35}
+.drie-kaarten.compact{gap:16px;margin-top:32px}
+.drie-kaarten.compact .kaart{padding:22px 24px}
+.drie-kaarten.compact .nr{margin-bottom:8px}
+.drie-kaarten.compact h3{font-size:16.5px;margin:0 0 6px}
+.drie-kaarten.compact p{font-size:14.5px;line-height:1.5;color:var(--muted)}
 
 .stappen{margin-top:44px;border-top:1px solid var(--rand)}
 .stap{display:grid;grid-template-columns:64px 1fr;column-gap:24px;row-gap:0;padding:28px 0;border-bottom:1px solid var(--rand);align-items:start}
