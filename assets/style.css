@@ -105,6 +105,12 @@ p{margin:0 0 14px}
 .stap .n{font-size:13px;letter-spacing:.1em;color:var(--muted);padding-top:4px}
 .stap h3{font-size:19px;font-weight:500;margin:0 0 6px;color:var(--donker)}
 .stap p{font-size:15.5px;line-height:1.6;margin:0;max-width:62ch}
+/* Stappen met een icoon in de marge (homepage). De vier stappen op slimme-meter.html
+   hebben geen .stap-teken en houden de opbouw hierboven. */
+.stap > .stap-teken{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding-top:2px}
+.stap > .stap-teken svg{width:24px;height:24px;display:block;color:var(--groen);opacity:.6}
+.stap > .stap-teken .n{padding-top:0;grid-column:auto;grid-row:auto}
+.stap > .stap-tekst{grid-column:2;grid-row:1}
 
 .accent{background:var(--donker2);border-radius:2px;padding:56px;display:flex;align-items:center;gap:48px;flex-wrap:wrap}
 .breed{background:var(--donker2);position:relative;overflow:hidden;padding:0}
