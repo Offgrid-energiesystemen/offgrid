@@ -31,11 +31,27 @@ p{margin:0 0 14px}
 .donker .tekstlink{border-bottom-color:rgba(255,255,255,.35)}
 
 .hdr{background:var(--donker);border-bottom:1px solid rgba(255,255,255,.10);
-  position:sticky;top:0;z-index:100}
+  position:sticky;top:0;z-index:100;
+  /* Eén maat voor het logo; de rest rekent daarmee. Zo blijft de verhouding kloppen als
+     de hoogte op mobiel verandert. */
+  --logoh:40px}
 .hdr .wrap{display:flex;align-items:center;gap:36px;padding-top:22px;padding-bottom:22px}
-.hdr img{height:40px;width:auto;display:block}
+/* Het logo bestaat uit twee beelden: het volledige (raster + tekst) en alleen het raster met
+   het ruitje. Bij scrollen krimpt de doos naar de breedte van het icoon en wisselen ze van
+   opacity. Eerder knipte ik het volledige logo gewoon af op de breedte van het raster, maar
+   de ruimte tussen raster en tekst is maar 2,5px -- dan zie je bij sommige zoomstanden een
+   halve O rechts. Twee beelden is niet fragiel. */
+.hdr .logo{position:relative;display:block;height:var(--logoh);
+  width:calc(var(--logoh) * 4.7716);transition:width .38s cubic-bezier(.2,.7,.3,1)}
+.hdr .logo img{position:absolute;top:0;left:0;height:var(--logoh);width:auto;max-width:none;
+  display:block;transition:opacity .28s ease}
+.hdr .logo .icoon{opacity:0}
+.hdr.is-klein .logo{width:calc(var(--logoh) * 1.02)}
+.hdr.is-klein .logo .vol{opacity:0}
+.hdr.is-klein .logo .icoon{opacity:1}
 .hdr nav{display:flex;gap:30px;margin-left:auto;font-size:13.5px;letter-spacing:.015em;color:#AEBAC6}
 .hdr nav a:hover{color:#fff}
+@media (prefers-reduced-motion:reduce){.hdr .logo,.hdr .logo img{transition:none}}
 
 .hero{background:var(--donker);color:#fff;position:relative;overflow:hidden}
 .hero .landschap{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:1}
@@ -206,7 +222,7 @@ p{margin:0 0 14px}
   .sectie{padding:72px 0}
   .hdr nav{display:none}
   .hdr .wrap{padding-top:16px;padding-bottom:16px;flex-wrap:wrap;gap:12px}
-  .hdr img{height:30px}
+  .hdr{--logoh:30px}
   .hdr .knop{font-size:12.5px;padding:10px 14px;margin-left:auto}
   .cijfers{gap:32px}
   .cijfers .c{font-size:27px;height:32px;line-height:32px}
