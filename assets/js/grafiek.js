@@ -59,7 +59,16 @@
       var min = breedte / 2 + marge;
       var max = w.width - breedte / 2 - marge;
       tip.style.left = Math.round(max < min ? w.width / 2 : Math.max(min, Math.min(max, x))) + "px";
-      tip.style.top = Math.round(k.top - w.top + 4) + "px";
+      // Het vak hoort boven de balken te hangen, niet erover. Sinds de grafiek minder leegte
+      // boven de balken heeft, is daar binnen het tekenvlak geen ruimte meer voor: het vak
+      // hing op de balken. Daarom zakt het naar de ruimte boven de grafiek, met de onderkant
+      // net boven de bovenrand van het tekenvlak. Komt hij daarbij op de kop van de kaart
+      // terecht, dan houdt de percentageregel hem tegen: dat is het hoogste punt dat hij mag
+      // gebruiken, zodat de titel van de kaart altijd leesbaar blijft.
+      var pct = vak.parentElement && vak.parentElement.querySelector(".pct");
+      var grens = pct ? pct.getBoundingClientRect().top - w.top : 0;
+      var wenst = k.top - w.top - 6 - tip.offsetHeight;
+      tip.style.top = Math.round(Math.max(wenst, grens)) + "px";
     }
 
     function verberg() {
